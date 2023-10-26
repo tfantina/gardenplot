@@ -1,0 +1,17 @@
+html[data-theme="forest"] {
+    --text: #{$forest-text};
+    --primary: #{$forest-primary};
+    --primary-dark: #{$forest-primary-dark};
+    --forest-bg: #{$forest-bg};
+    --forest-accent: #{$forest-accent}
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--text);
+}
+
+.content {
+    background-color: var(--forest-bg);
+}
+
