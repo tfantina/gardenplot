@@ -2,8 +2,8 @@ html[data-theme="forest"] {
     --text: #{$forest-text};
     --primary: #{$forest-primary};
     --primary-dark: #{$forest-primary-dark};
-    --forest-bg: #{$forest-bg};
-    --forest-accent: #{$forest-accent}
+    --content-bg: #{$forest-bg};
+    --content-accent: #{$forest-accent}
 }
 
 body {
@@ -12,6 +12,6 @@ body {
 }
 
 .content {
-    background-color: var(--forest-bg);
+    background-color: var(--content-bg);
 }
 

@@ -1,2 +1,30 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "utopia.scss";
 @import "themes.scss";
+@import "buttons.scss";
+@import "cards.scss";
+
+body {
+    font-size: $text;
+}
+
+h1 {
+    font-size: $text-h2
+}
+
+h2 {
+    font-size: $text-h2;
+}
+
+h3 {
+    font-size: $text-h3;
+}
+
+h4 {
+    font-size: $text-xl;
+}
+
+h5 {
+    font-size: $text-lg;
+}
+
