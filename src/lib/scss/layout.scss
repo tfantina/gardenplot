@@ -1,0 +1,23 @@
+.nav-container {
+    display: none;
+
+    @include media-md {
+        display: flex;
+    } 
+}
+
+header {
+    max-width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--content-bg);
+    margin-top: 100px;
+
+    @include media-md {
+        display: none;
+    }
+}
+

@@ -20,13 +20,19 @@
 }
 
 .btn-nav:hover {
+  color: var(--primary);
   border: solid 2px var(--primary);
   background-color: var(--content-bg);
 }
 
 
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+  color: var(--content-bg);
+  border: solid 2px var(--primary);
+  background-color: var(--primary);
+}
 
 .btn:hover {
   transform: translate(-3px, -3px);
-  
 }
+

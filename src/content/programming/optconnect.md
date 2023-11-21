@@ -1,5 +1,7 @@
 ---
 title: OptConnect
+hero: 'images/programming/optconnect/hero.png'
+alt: 'OptConnect'
 daterange: 'Jul 2020 - Dec 2020'
 date: '2020-07-01'
 technologies: ['CraftCMS', 'Twig']

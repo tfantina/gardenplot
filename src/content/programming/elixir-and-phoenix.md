@@ -1,9 +1,12 @@
 ---
 title: Elixir & Phoenix
+hero: ''
+alt: 'Elixir and Phoenix Projects'
 daterange: 'Sep 2019 - Present'
 date: '2023-12-31'
 technologies: ['Elixir', 'Phoenix', 'LiveView']
 ---
+
 
 Since 2019 at about 80% of the work I've done has been Elixir based. Consulting for an agency projects tend to come and go but I've been a constant on two big Elixir projects beginning in the fall of 2019 and the summer of 
 2020 respectively. These are not trivial sites, they interface directly with the clients' accounting services (in one case a large ERP system) and handles over a million dollars of transactions a day.

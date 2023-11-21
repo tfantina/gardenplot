@@ -1,10 +1,10 @@
 <script>
     import Header from '$lib/components/page/Header.svelte';
     import Nav from '$lib/components/page/Nav.svelte';
+    import MobileFooter from '$lib/components/page/MobileFooter.svelte'
     import '$lib/scss/global.scss'
     import { page } from '$app/stores';
-    console.log("WOO HOO")
-    console.log($page.data.title)
+    
 </script>
 <div class="container">
     <Header>
@@ -17,3 +17,4 @@
         </div>
     </div>
 </div>
+<MobileFooter />

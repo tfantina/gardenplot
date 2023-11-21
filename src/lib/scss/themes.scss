@@ -3,7 +3,9 @@ html[data-theme="forest"] {
     --primary: #{$forest-primary};
     --primary-dark: #{$forest-primary-dark};
     --content-bg: #{$forest-bg};
-    --content-accent: #{$forest-accent}
+    --content-accent: #{$forest-accent};
+    --accent-overlay: #{$forest-accent-overlay};
+    --bg-overlay: #{$forest-bg-overlay};
 }
 
 body {
