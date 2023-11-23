@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+   
+    import Bio from '$lib/components/page/Bio.svelte';
+    import Featured from '$lib/components/page/Featured.svelte';
+</script>
+
+<Bio />
+<Featured />

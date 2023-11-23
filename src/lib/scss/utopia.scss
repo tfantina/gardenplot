@@ -1,0 +1,21 @@
+
+$text-xs: clamp(0.6944rem, 0.6642rem + 0.1509vw, 0.8rem);
+$text-sm: clamp(0.8331rem, 0.7854rem + 0.2384vw, 1rem);
+$text: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+$text-lg: clamp(1.2rem, 1.0964rem + 0.5179vw, 1.5625rem);
+$text-xl: clamp(1.44rem, 1.2934rem + 0.733vw, 1.9531rem);
+$text-h3: clamp(1.7281rem, 1.5244rem + 1.0188vw, 2.4413rem);
+$text-h2: clamp(2.0738rem, 1.7943rem + 1.3973vw, 3.0519rem);
+$text-h1: clamp(2.4881rem, 2.109rem + 1.8955vw, 3.815rem);
+
+
+$pad-3xs: clamp(0.25rem, 0.2321rem + 0.0893vw, 0.3125rem);
+$pad-2xs: clamp(0.5rem, 0.4643rem + 0.1786vw, 0.625rem);
+$pad-xs: clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem);
+$pad-s: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+$pad-m: clamp(1.5rem, 1.3929rem + 0.5357vw, 1.875rem);
+$pad-lg: clamp(2rem, 1.8571rem + 0.7143vw, 2.5rem);
+$pad-xl: clamp(3rem, 2.7857rem + 1.0714vw, 3.75rem);
+$pad-2xl: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
+$pad-3xl: clamp(6rem, 5.5714rem + 2.1429vw, 7.5rem);
+
