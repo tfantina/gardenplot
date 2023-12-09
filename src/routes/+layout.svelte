@@ -9,6 +9,7 @@
 <div class="container">
     <Header>
         <span slot="title">{$page.data.title}</span>
+        <img src={$page.data.image} alt={$page.data.title} class="header-image"slot="headerimg" />
     </Header>
     <div class="row">
         <Nav />
