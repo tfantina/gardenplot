@@ -3,7 +3,7 @@ title: Know Before You Go
 hero: 'images/programming/kbyg/hero.png'
 alt: 'Know Before You Go'
 daterange: 'Apr - Oct 2022'
-date: '2020-04-01'
+date: '2022-04-01'
 technologies: ['Svelte', 'SvelteKit', 'GreenSock']
 ---
 

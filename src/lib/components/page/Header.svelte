@@ -1,3 +1,6 @@
-<header class="d-flex justify-content-center m-5 rounded-3">
-        <h1><slot name="title" /></h1>
+<header class="d-flex justify-content-center rounded-3">
+        <slot name="headerimg" />
+        <div class="header-content">
+                <h1><slot name="title" /></h1>
+        </div>
 </header>
