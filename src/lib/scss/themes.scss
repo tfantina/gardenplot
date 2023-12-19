@@ -8,6 +8,26 @@ html[data-theme="forest"] {
     --bg-overlay: #{$forest-bg-overlay};
 }
 
+html[data-theme="creamsicle"] {
+    --text: #{$creamsicle-text};
+    --primary: #{$creamsicle-primary};
+    --primary-dark: #{$creamsicle-primary-dark};
+    --content-bg: #{$creamsicle-bg};
+    --content-accent: #{$creamsicle-accent};
+    --accent-overlay: #{$creamsicle-accent-overlay};
+    --bg-overlay: #{$creamsicle-bg-overlay}; 
+}
+
+html[data-theme="nightly"] {
+    --text: #{$nightly-text};
+    --primary: #{$nightly-primary};
+    --primary-dark: #{$nightly-primary-dark};
+    --content-bg: #{$nightly-bg};
+    --content-accent: #{$nightly-accent};
+    --accent-overlay: #{$nightly-accent-overlay};
+    --bg-overlay: #{$nightly-bg-overlay}; 
+}
+
 body {
     background-color: var(--primary);
     color: var(--text);
@@ -17,3 +37,38 @@ body {
     background-color: var(--content-bg);
 }
 
+.theme-box {
+    display: absolute;
+    z-index: 5000;
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 45px;
+    margin-left: -170px;
+    transition: .3s;
+    background-color: #1B1129;
+    border-bottom-right-radius: 8px;
+}
+
+.theme-box:hover {
+    margin-left: 0;
+}
+
+.themable {
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    border: none;
+}
+
+.themable.forest {
+    background: linear-gradient(-45deg, $forest-primary 50%, $forest-bg 50%);
+}
+
+.themable.creamsicle {
+    background: linear-gradient(-45deg, $creamsicle-primary 50%, $creamsicle-bg 50%);
+}
+
+.themable.nightly {
+    background: linear-gradient(-45deg, $nightly-primary 50%, $nightly-bg 50%);
+}
