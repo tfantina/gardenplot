@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import Card from '$lib/components/display/Card.svelte';
     export let data;
 </script>
@@ -15,7 +16,7 @@ languages and stacks.  For the most part I work in the Elixir, Ruby and Javascri
 </p>
 <div class="d-flex flex-column">
 {#each data.projects as project}
-    <Card path={project.path} meta={project.meta} />
+    <Card path={`${base}${project.path}`} meta={project.meta} />
 {/each}
 </div>
    
