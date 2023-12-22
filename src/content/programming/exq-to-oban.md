@@ -3,7 +3,7 @@ title: Exq to Oban
 hero: ''
 alt: 'Elixir and Phoenix Projects'
 daterange: 'Sep 2022 - May 2023'
-date: '2022-11-'
+date: '2022-11-01'
 technologies: ['Elixir', 'Phoenix']
 ---
 
