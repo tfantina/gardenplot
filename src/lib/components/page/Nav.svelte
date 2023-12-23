@@ -10,6 +10,5 @@
         <NavButton text="Visuals" target={`${base}/visuals`} />
         <NavButton text="Projects" target={`${base}/projects`} />
         <NavButton text="About" target={`${base}/about`} />
-        <NavButton text="Now" target={`${base}/now`} />
     </div>
 </div>
