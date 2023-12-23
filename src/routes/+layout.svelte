@@ -21,6 +21,7 @@
         theme = window.localStorage.getItem('theme');
         theme ? setTheme(theme) : setTheme('forest')
     })
+    export const prerender = true;
     
 </script>
 <ThemeSelect {setTheme} {currentTheme} />
