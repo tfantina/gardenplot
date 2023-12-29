@@ -1,5 +1,4 @@
 <script>
-
     export let meta, path;
 
     let {title: title, daterange: daterange, technologies: technologies, hero: hero, alt: alt} =  meta
