@@ -5,10 +5,15 @@
 
 </script>
 <a href={path} class="no-underline">
-<div class="card" 
-    style="background-image: linear-gradient(165deg, var(--bg-overlay) 2%, var(--accent-overlay)), url({hero})"
->
-    <div class="card-body d-flex flex-column">
+<div class="content-link">
+    <div class="content-link--image">
+        {#if hero}
+            <img src="{hero}" alt="image-hero"/>
+        {:else}
+            { title }
+        {/if}
+    </div>
+    <div class="content-link--content d-flex flex-column justify-content-center">
         <h5>{title}</h5>
         {daterange}
         <div>

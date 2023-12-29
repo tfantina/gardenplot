@@ -26,11 +26,12 @@
 <p>
     This website was built with SvelteKit because I enjoy Svelte and it's a fast way to get ideas out of my head and into a browser.
     At the moment there are <strong>0</strong> cookies on this website. No trackers, no CTAs and no SEO. It's just a website, 
-    you may find it through a link or because I told you but I'm not trying to optomize anything. 
+    you may find it through a link or because I told you but I'm not trying to optomize anything. I do place <strong>1</strong> item 
+    in your local storage which tells the CSS which theme to choose (this site comes in multiple themes because I follow trends).
 </p>
 <p>
     If you'd like to get started building a website you should do it, you don't need Svelte, or JavaScript or even much html. 
     You can write your thoughts in a text editor, save them as a `.html` file and host them online.  If you'd like help 
-    feel free to shoot me an email: <a href="mailto:trav@hey.com">trav[at]hey[dot]com</a>.
+    feel free to shoot me an email: <a href="mailto:self@travisfantina.com">self[at]travisfantina[dot]com</a>.
 </p>
 
