@@ -1,35 +1,35 @@
 .btn-nav--bg {
   height: 40px;
-  width: 120px;
+  width: 140px;
   margin: 5px;
   background-size: 6px 6px;
-  background-image: repeating-linear-gradient(45deg, var(--primary) 0, var(--primary) 1px, var(--content-bg) 0, var(--content-bg) 50%);
+  background-image: repeating-linear-gradient(45deg, var(--links) 0, var(--links) 1px, var(--content-bg) 0, var(--content-bg) 50%);
   border-radius: 10px;
-  outline: solid -2px var(--primary);
+  outline: solid -2px var(--links);
 }
 
 .btn-nav {
   position: relative;
   width: 100%;
   height: 100%;
-  color: var(--primary);
+  color: var(--links);
   background-color: var(--content-bg);
-  border: solid 2px var(--primary);
+  border: solid 2px var(--links);
   border-radius: 10px;
   transition: transform .5s;
 }
 
 .btn-nav:hover {
-  color: var(--primary);
-  border: solid 2px var(--primary);
+  color: var(--links);
+  border: solid 2px var(--links);
   background-color: var(--content-bg);
 }
 
 
 .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
   color: var(--content-bg);
-  border: solid 2px var(--primary);
-  background-color: var(--primary);
+  border: solid 2px var(--links);
+  background-color: var(--links);
 }
 
 .btn:hover {

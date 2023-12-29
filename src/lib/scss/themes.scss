@@ -6,6 +6,8 @@ html[data-theme="forest"] {
     --content-accent: #{$forest-accent};
     --accent-overlay: #{$forest-accent-overlay};
     --bg-overlay: #{$forest-bg-overlay};
+    --headings: #{$forest-text};
+    --links:  #{$forest-primary};
 }
 
 html[data-theme="creamsicle"] {
@@ -16,6 +18,8 @@ html[data-theme="creamsicle"] {
     --content-accent: #{$creamsicle-accent};
     --accent-overlay: #{$creamsicle-accent-overlay};
     --bg-overlay: #{$creamsicle-bg-overlay}; 
+    --headings: #{$creamsicle-text};
+    --links:  #{$creamsicle-primary};
 }
 
 html[data-theme="nightly"] {
@@ -26,6 +30,8 @@ html[data-theme="nightly"] {
     --content-accent: #{$nightly-accent};
     --accent-overlay: #{$nightly-accent-overlay};
     --bg-overlay: #{$nightly-bg-overlay}; 
+    --headings: #{$nightly-heading};
+    --links:  #{$nightly-text};
 }
 
 body {
@@ -33,32 +39,48 @@ body {
     color: var(--text);
 }
 
+h1, h2, h3, h4, h5 {
+    color: var(--headings);
+}
+
 .content {
     background-color: var(--content-bg);
 }
 
 .theme-box {
-    display: absolute;
+    display: flex;
+    justify-content: flex-end;
     z-index: 5000;
     position: fixed;
+    padding: $pad-xs;
     top: 0;
-    width: 200px;
-    height: 45px;
-    margin-left: -170px;
+    width: 215px;
+    margin-left: -150px;
     transition: .3s;
-    background-color: #1B1129;
+    background-color: var(--primary);
     border-bottom-right-radius: 8px;
+
+    &--all {
+        padding: 0 $pad-3xs;
+    }
+
+    &--current {
+        padding: 0 $pad-3xs;
+        border-left: solid 3px var(--content-accent);
+    }
 }
 
 .theme-box:hover {
     margin-left: 0;
 }
 
+
+
 .themable {
     height: 35px;
     width: 35px;
     border-radius: 100%;
-    border: none;
+    border: solid 2px var(--text);
 }
 
 .themable.forest {

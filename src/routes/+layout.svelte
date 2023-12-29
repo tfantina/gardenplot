@@ -27,7 +27,13 @@
 <div class="container">
     <Header>
         <span slot="title">{$page.data.title}</span>
-        <img src={$page.data.image} alt={$page.data.title} class="header-image"slot="headerimg" />
+        <svelte:fragment slot="headerimg">
+            <div class="header-image">
+                {#if $page.data.image}
+                    <img src={$page.data.image} alt={$page.data.title}/>
+                {/if}
+            </div>
+        </svelte:fragment>
     </Header>
     <div class="row">
         <Nav />

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Shrikhand&display=swap');
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "utopia.scss";
 @import "themes.scss";
@@ -6,27 +7,36 @@
 @import "buttons.scss";
 @import "cards.scss";
 
+$headings: 'Shrikhand', serif;
+$primary: 'Montserrat', sans-serif;
+
 body {
+    font-family: $primary;
     font-size: $text-sm;
 }
 
 h1 {
+    font-family: $headings;
     font-size: $text-h2
 }
 
 h2 {
+    font-family: $headings;
     font-size: $text-h2;
 }
 
 h3 {
+    font-family: $headings;
     font-size: $text-h3;
 }
 
 h4 {
+    font-family: $headings;
     font-size: $text-xl;
 }
 
 h5 {
+    font-family: $headings;
     font-size: $text;
 }
 
