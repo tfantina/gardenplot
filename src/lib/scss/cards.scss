@@ -14,7 +14,8 @@
     position: relative;
     z-index: 500;
     height: calc($pad-3xl * 1.3);
-    width: calc($pad-3xl * 2.5);
+    min-width: calc($space-l-3xl * 2.5);
+    max-width: calc($space-l-3xl * 2.5);
     overflow: hidden;
     border: solid 4px var(--content-accent);
     background-color: var(--primary);

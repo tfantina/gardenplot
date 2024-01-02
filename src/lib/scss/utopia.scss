@@ -19,3 +19,13 @@ $pad-xl: clamp(3rem, 2.7857rem + 1.0714vw, 3.75rem);
 $pad-2xl: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
 $pad-3xl: clamp(6rem, 5.5714rem + 2.1429vw, 7.5rem);
 
+
+$space-l-3xl: clamp(2.25rem, 0.4239rem + 9.1304vw, 7.5rem);
+$space-3xs-2xs: clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem);
+$space-2xs-xs: clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem);
+$space-xs-s: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
+$space-s-m: clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
+$space-m-l: clamp(1.6875rem, 1.4049rem + 1.413vw, 2.5rem);
+$space-l-xl: clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);
+$space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
+$space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
