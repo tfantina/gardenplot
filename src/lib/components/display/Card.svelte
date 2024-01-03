@@ -1,7 +1,7 @@
 <script>
     export let meta, path;
-
-    let {title: title, daterange: daterange, technologies: technologies, hero: hero, alt: alt} =  meta
+    console.log(meta)
+    let {title: title, daterange: daterange, tags: tags, hero: hero, alt: alt} =  meta
 
 </script>
 <a href={path} class="no-underline">
@@ -17,7 +17,7 @@
         <h5>{title}</h5>
         {daterange}
         <div>
-        {#each technologies as technology}
+        {#each tags as technology}
            <span class="tag">{technology}</span>
         {/each}
         </div>

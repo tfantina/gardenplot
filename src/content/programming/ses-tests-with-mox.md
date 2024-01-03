@@ -4,7 +4,7 @@ hero: ''
 alt: 'Elixir Mox Library'
 daterange: 'Jul 2022'
 date: '2022-07-30'
-technologies: ['Elixir', 'Phoenix', 'Mox', 'Bamboo']
+tags: ['Elixir', 'Phoenix', 'Mox', 'Bamboo']
 ---
 
 In my experience AWS SES offers little to no visibility into what emails are sending, how, when or to whom.

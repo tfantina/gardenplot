@@ -4,7 +4,7 @@ hero: ''
 alt: 'Elixir and Phoenix Projects'
 daterange: 'Sep 2022 - May 2023'
 date: '2022-11-01'
-technologies: ['Elixir', 'Phoenix']
+tags: ['Elixir', 'Phoenix']
 ---
 
 I'm the sole maintainer for a sales portal, processing about a million dollars a day in sales. The system was, historically, backed by Exq and Redis running on AWS. An order processing state machine is 

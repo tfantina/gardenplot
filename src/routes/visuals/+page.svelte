@@ -2,7 +2,6 @@
     import { base } from '$app/paths';
     import Card from '$lib/components/display/Card.svelte';
     export let data;
-console.log(data.photos)
 </script>
 
 {#each data.photos as photo}

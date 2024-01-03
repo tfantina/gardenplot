@@ -4,7 +4,7 @@ hero: 'images/programming/kbyg/hero.png'
 alt: 'Know Before You Go'
 daterange: 'Apr - Oct 2022'
 date: '2022-04-01'
-technologies: ['Svelte', 'SvelteKit', 'GreenSock']
+tags: ['Svelte', 'SvelteKit', 'GreenSock']
 ---
 
 The Know Before You Go program brings avalanche awareness and backcountry safety to classrooms and organizations around the world. Having partnered with Academy Awarding Sherpas Cinemas, KBYG launched a full 
