@@ -4,7 +4,7 @@ hero: 'images/programming/wildelements/hero.png'
 alt: 'WildElements hero'
 daterange: 'Feb 2021'
 date: '2021-02-01'
-technologies: ['React']
+tags: ['React']
 ---
 
 WildElements was a new wellness brand launching in the spring of 2021, Objective worked with a marketing agency out of New York to bring a landing page to life. The project was well organized and they had a full featured 

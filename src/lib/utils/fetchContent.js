@@ -2,8 +2,12 @@ export const fetchContent = async (type) => {
     let allFiles;
     switch (type) {
         case "programming": allFiles = import.meta.glob('/src/content/programming/*.md');
+            break;
+        case "projects": allFiles = import.meta.glob('/src/content/projects/*.md');
+            break;
         default: allFiles = import.meta.glob('/src/content/programming/*.md');
     }
+
     
     const allContent = Object.entries(allFiles);
 
@@ -19,6 +23,7 @@ export const fetchContent = async (type) => {
             }
         })
     )
+
 
     return content;
 }
