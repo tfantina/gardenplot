@@ -1,5 +1,5 @@
 <p>
-Hi, I'm Travis, I'm a web gardner. This is my garden.
+Hi, I'm Travis, I'm a web gardener. This is my garden.
 </p>
 <p>
 I enjoy making things, art, photos, vegan pizzas, and bitchen websites. In my consulting work 

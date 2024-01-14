@@ -8,7 +8,7 @@ tags: ['Svelte', 'SvelteKit', 'GreenSock']
 ---
 
 The Know Before You Go program brings avalanche awareness and backcountry safety to classrooms and organizations around the world. Having partnered with Academy Awarding Sherpas Cinemas, KBYG launched a full 
-rebrand of their course as well as a feature documentry **To the Hills and Back**. I was fully in charge of development for the markeing site.  I worked closely with the lead designer at Objective as well as
+rebrand of their course as well as a feature documentary **To the Hills and Back**. I was fully in charge of development for the markeing site.  I worked closely with the lead designer at Objective as well as
 the client to refine the vision and bring the site to life.
 
 Having worked with Svelte on some personal projects I felt that the framework was both mature and robust enough to be used in production. Svelte comes with a lot of handy features out of the box such as data stores, 
