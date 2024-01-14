@@ -1,6 +1,6 @@
 <h2>About</h2>
 <p>
-    I'm not enough of a celeberty to assume that if you are here you don't already know me. I won't droll on about biographic details. 
+    I'm not enough of a celebrity to assume that if you are here you don't already know me. I won't droll on about biographic details. 
 </p>
 <p>
     The internet is a interesting place, bursting onto the scene some 30 years ago in an explosion of chaos, it was the wild west.

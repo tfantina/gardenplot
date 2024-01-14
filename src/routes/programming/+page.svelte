@@ -4,7 +4,7 @@
     export let data;
 </script>
 <p>
-A collection of projects I've built for fun and profit.
+Tales from my professional life as a programmer: a not-comprehensive list of projects that I've worked on in the past few years.
 </p>
 <p>
 Most of my programming time is spent working as a 

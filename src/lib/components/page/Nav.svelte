@@ -9,6 +9,7 @@
         <NavButton text="Programming" target={`${base}/programming`} />
         <NavButton text="Visuals" target={`${base}/visuals`} />
         <NavButton text="Projects" target={`${base}/projects`} />
+        <NavButton text="Feed" target={`${base}/feed`} />
         <NavButton text="About" target={`${base}/about`} />
     </div>
 </div>

@@ -1,7 +1,12 @@
 <script>
     export let meta, path;
-    console.log(meta)
-    let {title: title, daterange: daterange, tags: tags, hero: hero, alt: alt} =  meta
+    let {title: title, daterange: daterange, tags: tags, hero: hero, alt: alt, date: date} =  meta
+
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    };
 
 </script>
 <a href={path} class="no-underline">
@@ -15,7 +20,14 @@
     </div>
     <div class="content-link--content d-flex flex-column justify-content-center">
         <h5>{title}</h5>
-        {daterange}
+        <div class="meta d-flex flex-column">
+            {#if daterange}
+             Project Timeline: {daterange}
+            {/if}
+            <div>
+                {new Date(Date.parse(date)).toLocaleDateString("en-GB", options)}
+            </div>
+        </div>
         <div>
         {#each tags as technology}
            <span class="tag">{technology}</span>
