@@ -48,12 +48,18 @@ h5 {
     border: solid 2px var(--content-accent);
 }
 
-.photo-content {
-    display: flex;
-    flex-direction: column;
-    img {
-        align-self: center;
-        max-height: 100vh;
+.photo {
+    margin-top: $pad-lg;
+    margin-bottom: $pad-lg;
+    
+     &--content {
+        display: flex;
+        flex-direction: column;
+        img {
+            align-self: center;
+            max-width: 90%;
+            max-height: 100vh;
+        }
     }
 }
 
