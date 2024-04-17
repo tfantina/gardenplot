@@ -1,6 +1,6 @@
 <script>
     export let meta, path;
-    let {title: title, daterange: daterange, tags: tags, hero: hero, alt: alt, date: date} =  meta
+    let {title: title, content: content, daterange: daterange, tags: tags, hero: hero, alt: alt, date: date, source: source} =  meta
 
     const options = {
       year: 'numeric',
@@ -20,6 +20,9 @@
     </div>
     <div class="content-link--content d-flex flex-column justify-content-center">
         <h5>{title}</h5>
+        <p>
+
+        </p>    
         <div class="meta d-flex flex-column">
             {#if daterange}
              Project Timeline: {daterange}

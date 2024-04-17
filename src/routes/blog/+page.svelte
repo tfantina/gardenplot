@@ -7,13 +7,12 @@
 
 <div class="d-flex flex-column">
 <p>
-    Something akin to a blog.  All of my projects, photos, and thoughts are collected here.  
-    Coming soon... Tag organization.
+    Something akin to a blog. Thoughts, photos, and relevant updates are collected here, click a tag to narrow by interest.
 </p>
 <div class="d-flex flex-wrap mb-4">
     {#each data.tags as tag}
         <div class="tag mx-1">
-            {tag}
+            <a href="/blog/tags/{tag}">{tag}</a>
         </div>
     {/each}
 </div>

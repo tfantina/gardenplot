@@ -45,7 +45,18 @@ h5 {
     font-size: $text-xs;
     padding: $pad-3xs;
     border-radius: 6px;
-    border: solid 2px var(--content-accent);
+    border: solid 1px var(--links);
+
+    a {
+        color: var(--content-accent);
+        text-decoration: none;
+        transition: .5s;
+    }
+
+    a:hover {
+        color: var(--links);
+        text-decoration: underline dotted;
+    }
 }
 
 .meta {
