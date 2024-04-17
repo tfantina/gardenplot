@@ -17,7 +17,7 @@
     min-width: calc($space-l-3xl * 2.5);
     max-width: calc($space-l-3xl * 2.5);
     overflow: hidden;
-    border: solid 4px var(--content-accent);
+    border: solid 2px var(--links);
     background-color: var(--primary);
     border-radius: 8px;
 
@@ -38,7 +38,7 @@
     padding-left: 40px;
     margin-bottom: $pad-2xs;
     object-fit: cover;
-    border: solid 4px var(--content-accent);
+    border: solid 2px var(--links);
     background-size: cover;   
     border-radius: 8px;
 }

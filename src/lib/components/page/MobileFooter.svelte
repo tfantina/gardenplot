@@ -4,9 +4,8 @@
 </script>
 <footer class="col align-items-center">
     <NavButton text="Home" target={`${base}/`} />
-    <NavButton text="Programming" target={`${base}/programming`} />
-    <NavButton text="Visuals" target={`${base}/visuals`} />
-    <NavButton text="Projects" target={`${base}/projects`} />
-     <NavButton text="Feed" target={`${base}/feed`} />
+    <NavButton text="Blog" target={`${base}/blog`} />
     <NavButton text="About" target={`${base}/about`} />
+    <NavButton text="Programming" target={`${base}/programming`} />
+    <NavButton text="Projects" target={`${base}/projects`} />
 </footer>

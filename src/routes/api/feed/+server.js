@@ -1,21 +1,40 @@
-import { fetchContent } from '$lib/utils';
+import { fetchContent, fetchContentByTag } from '$lib/utils';
 import { json } from '@sveltejs/kit';
 
-export const GET = async () => {
-    const allProjects = await fetchContent('all');
+export const GET = async ({ url }) => {
+    let sortedProjects, tags;
+    const tag = url.searchParams.get("tag")
 
-    const sortedProjects = allProjects.sort((a, b) => {
-        return new Date(b.meta.date) - new Date(a.meta.date);
-    });
+    if (tag) {
+        const allProjects = await fetchContentByTag(tag)
 
-    const unique = (val, index, array) => {
-        console.log(array.indexOf(val) === index)
-        return array.indexOf(val) === index
-    } 
+        sortedProjects = allProjects.sort((a, b) => {
+            return new Date(b.meta.date) - new Date(a.meta.date);
+        });
 
-    const tags = sortedProjects.flatMap(proj => {
-        return proj.meta.tags.map(tag => tag.toLowerCase())
-    }).filter(unique)
+        const unique = (val, index, array) => {
+            return array.indexOf(val) === index
+        } 
+
+        tags = sortedProjects.flatMap(proj => {
+            return proj.meta.tags.map(tag => tag.toLowerCase())
+        }).filter(unique)
+    }
+    else {
+        const allProjects = await fetchContent('blog');
+
+        sortedProjects = allProjects.sort((a, b) => {
+            return new Date(b.meta.date) - new Date(a.meta.date);
+        });
+
+        const unique = (val, index, array) => {
+            return array.indexOf(val) === index
+        } 
+
+        tags = sortedProjects.flatMap(proj => {
+            return proj.meta.tags.map(tag => tag.toLowerCase())
+        }).filter(unique)
+    }
 
 
     return json({ content: sortedProjects, tags: tags })

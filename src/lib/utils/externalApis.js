@@ -23,7 +23,7 @@ export const fetchFromPixelfed = async (type) => {
 
 export const makeMetaFromPixelfed = (photo) => {
     const hero = photo.content.match(/(?<=src=")[^"]+/g)[0]
-    const meta = { title: photo.title, hero: hero, date: photo.updated, tags: ["photography"] }
+    const meta = { title: photo.title, hero: hero, date: photo.updated, tags: ["photography"], source: "pixelfed" }
 
     return {
         "meta": meta,
