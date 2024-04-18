@@ -22,6 +22,9 @@
         theme ? setTheme(theme) : setTheme('forest')
     })
     export const prerender = true;
+
+    let img = $page.data.image
+    let [imgname, _] = $page.data.image.split(".")
     
 </script>
 <ThemeSelect {setTheme} {currentTheme} />
@@ -31,12 +34,16 @@
         <svelte:fragment slot="headerimg">
             <div class="header-image">
                 {#if $page.data.image}
-                    <img src={$page.data.image} alt={$page.data.title}/>
+                  <picture>
+                        <source srcset="{imgname}.webp" type="image/webp">
+                        <source srcset="{img}" type="image/jpeg">
+                        <img src="{img}" alt="{$page.data.title}" />
+                    </picture>
                 {/if}
             </div>
         </svelte:fragment>
     </Header>
-    <div class="row">
+    <div class="d-flex">
         <Nav />
         <div class="col-md-9 col-lg-10 content rounded-3 p-4">
             <slot /> 
