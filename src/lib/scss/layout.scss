@@ -5,13 +5,19 @@
         display: flex;
     } 
 
+    .links {
+        positon: relative;
+        height: 100%;
+    }
+
     .content {
+        positon: absolute;
         width: 100%;
     }
 }
 
 header {
-    min-height: $pad-3xl;
+    height: calc($pad-2xl * 3);
     max-width: 100%;
     position: relative;
     margin:  $pad-s 0 ;
@@ -28,7 +34,7 @@ header {
     }
 
     .header-image {
-        height: calc($pad-3xl * 3);
+        height: $pad-xl;
         position: relative;
         object-fit: cover;
         height: 100%;
