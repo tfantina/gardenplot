@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     transition: .5s;
-    margin-bottom: $pad-m;
+    margin-bottom: $pad-2xl;
 
    .tag:nth-child(n + 2) {
         margin-left: $pad-2xs;
@@ -13,11 +13,9 @@
 .content-link--image {
     position: relative;
     z-index: 500;
-    height: calc($pad-3xl * 1.5);
-    min-width: calc($space-l-3xl * 2.5);
-    max-width: calc($space-l-3xl * 2.5);
+    height: $pad-2xl;
+    width: calc($pad-2xl * 1.5);
     overflow: hidden;
-    border: solid 2px var(--links);
     background-color: var(--primary);
     border-radius: 8px;
 
@@ -29,18 +27,21 @@
 }
 
 .content-link--content {
+    height: 100%;
     display: flex;
     position: relative;
     z-index: 100;
-    height: calc($pad-3xl * 1.2);
     width: 100%;
     margin-left: -30px;
     padding-left: 40px;
     margin-bottom: $pad-2xs;
     object-fit: cover;
-    border: solid 2px var(--links);
     background-size: cover;   
     border-radius: 8px;
+}
+
+.content-link--content__tag {
+    margin-left: 2rem; 
 }
 
 .content-link--inner {
