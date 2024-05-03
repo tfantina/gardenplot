@@ -13,9 +13,11 @@
 <div class="content-link">
     <div class="content-link--image">
         {#if hero}
-            <img src="{hero}" alt="image-hero"/>
+            <img src="{hero}" alt="hero thumbnail for {title}"/>
         {:else}
-            { title }
+            <div class="content-link--inner">
+                <div class="content-link--gradient"></div>
+            </div>
         {/if}
     </div>
     <div class="content-link--content d-flex flex-column justify-content-center">

@@ -43,6 +43,36 @@
     border-radius: 8px;
 }
 
+.content-link--inner {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.content-link--gradient {
+    height: 100%;
+    width: 100%;
+    background: rgb(255,0,0);
+    background: linear-gradient(69deg, rgba(255,0,0,1) 0%, rgba(255,134,0,1) 25%, rgba(255,254,4,1) 50%, rgba(0,255,40,1) 75%, rgba(31,0,255,1) 100%); 
+    filter: hue-rotate(1) saturate(100) blur(20px);
+    animation: hueshifter;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    opacity: .7;
+}
+
+@keyframes hueshifter {
+    from {
+        filter: hue-rotate(0deg) saturate(30) blur(50px);
+    }
+    to {
+        filter: hue-rotate(360deg) saturate(30) blur(50px);
+    }
+}
+
+
+
 a.no-underline {
     text-decoration: none;
 }
