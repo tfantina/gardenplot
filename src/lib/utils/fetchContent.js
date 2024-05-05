@@ -72,7 +72,9 @@ export const fetchForRSS = async (tag) => {
     })
 
 
-    return posts_and_content.concat(photo_meta)
+    return posts_and_content.concat(photo_meta).sort((a, b) => {
+        return new Date(b.meta.date) - new Date(a.meta.date);
+    });
 
 }       
 

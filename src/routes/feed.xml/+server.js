@@ -8,8 +8,6 @@ export const prerender = true;
 
 export const GET = async () => {
     const allPosts = await fetchForRSS();
-    console.log(allPosts)
-
     const posts = allPosts.sort((a, b) => {
         return new Date(b.meta.date) - new Date(a.meta.date);
     });
@@ -27,23 +25,23 @@ export const GET = async () => {
 }
 
 const render = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0">
     <channel>
         <title>${siteTitle}</title>
         <description>${siteDescription}</description>
+        <language>en</language>
         <link>${siteURL}</link>
-        <atom:link href="${siteURL}/rss.xml" rel="self" type="application/rss+xml" />
         ${posts.map((post) => 
     `
             <item>
-                <guid isPermalink="true">${siteURL}/blog/${post.path}</guid>
                 <title>${post.meta.title}</title>
                 <link>${siteURL}/blog/${post.path}</link>
-                <description>
-                    ${post.content || `<img src="${post.meta.hero}" alt="${post.meta.title} - photo" />`}
-                </description >
                 <pubDate>${new Date(post.meta.date).toUTCString()}</pubDate>
-            </item >
+                <guid>${siteURL}/blog/${post.path}</guid>
+                <description>
+                    <![CDATA[${post.content || `<img src="${post.meta.hero}" alt="${post.meta.title} - photo" />`}]]>
+                </description>
+            </item>
        `).join('')}
     </channel>
 </rss>
