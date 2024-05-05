@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One');
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "utopia.scss";
 @import "themes.scss";
@@ -7,7 +7,7 @@
 @import "buttons.scss";
 @import "cards.scss";
 
-$headings: 'Shrikhand', serif;
+$headings: 'Poetsen One', serif;
 $primary: 'Montserrat', sans-serif;
 
 body {
@@ -21,22 +21,26 @@ h1 {
 }
 
 h2 {
-    font-family: $headings;
+    font-family: $primary;
+    font-weight: 700;
     font-size: $text-h2;
 }
 
 h3 {
-    font-family: $headings;
+    font-family: $primary;
+    font-weight: 700;
     font-size: $text-h3;
 }
 
 h4 {
-    font-family: $headings;
+    font-family: $primary;
+    font-weight: 700;
     font-size: $text;
 }
 
 h5 {
-    font-family: $headings;
+    font-family: $primary;
+    font-weight: 700;
     font-size: $text-sm;
 }
 
@@ -62,7 +66,6 @@ h5 {
 .meta {
     color: var(--content-accent);
     font-size: $text-xs;
-    padding: $pad-2xs;
 }
 
 .photo {

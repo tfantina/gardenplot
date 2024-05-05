@@ -24,7 +24,10 @@
     export const prerender = true;
 
     let img = $page.data.image
-    let [imgname, _] = $page.data.image.split(".")
+    let imgname
+    if ($page.data.image) {
+        imgname = $page.data.image.split(".")[0]
+    }
     
 </script>
 <ThemeSelect {setTheme} {currentTheme} />

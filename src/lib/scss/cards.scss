@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     transition: .5s;
-    margin-bottom: $pad-m;
+    margin-bottom: $pad-2xl;
 
    .tag:nth-child(n + 2) {
         margin-left: $pad-2xs;
@@ -13,11 +13,9 @@
 .content-link--image {
     position: relative;
     z-index: 500;
-    height: calc($pad-3xl * 1.5);
-    min-width: calc($space-l-3xl * 2.5);
-    max-width: calc($space-l-3xl * 2.5);
+    height: $pad-2xl;
+    width: calc($pad-2xl * 1.5);
     overflow: hidden;
-    border: solid 2px var(--links);
     background-color: var(--primary);
     border-radius: 8px;
 
@@ -29,19 +27,52 @@
 }
 
 .content-link--content {
+    height: 100%;
     display: flex;
     position: relative;
     z-index: 100;
-    height: calc($pad-3xl * 1.2);
     width: 100%;
     margin-left: -30px;
     padding-left: 40px;
     margin-bottom: $pad-2xs;
     object-fit: cover;
-    border: solid 2px var(--links);
     background-size: cover;   
     border-radius: 8px;
 }
+
+.content-link--content__tag {
+    margin-left: 2rem; 
+}
+
+.content-link--inner {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.content-link--gradient {
+    height: 100%;
+    width: 100%;
+    background: rgb(255,0,0);
+    background: linear-gradient(69deg, rgba(255,0,0,1) 0%, rgba(255,134,0,1) 25%, rgba(255,254,4,1) 50%, rgba(0,255,40,1) 75%, rgba(31,0,255,1) 100%); 
+    filter: hue-rotate(1) saturate(100) blur(20px);
+    animation: hueshifter;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    opacity: .7;
+}
+
+@keyframes hueshifter {
+    from {
+        filter: hue-rotate(0deg) saturate(30) blur(50px);
+    }
+    to {
+        filter: hue-rotate(360deg) saturate(30) blur(50px);
+    }
+}
+
+
 
 a.no-underline {
     text-decoration: none;
