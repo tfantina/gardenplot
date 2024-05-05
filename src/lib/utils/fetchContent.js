@@ -33,6 +33,8 @@ const resolver = async (allContent) => {
     return Promise.all(
         allContent.map(async ([path, resolver]) => {
             const { metadata } = await resolver();
+            const posted = await resolver();
+            const res = posted.default.render();
             const postPath = path.slice(12, -3);
 
             return {
@@ -44,14 +46,48 @@ const resolver = async (allContent) => {
 }
 
 const fetchAll = async () => {
-    const dispatchs = Object.entries(import.meta.glob('/src/content/blog/*.md'));
-    const dispatch_meta = await resolver(dispatchs)
+    const posts = Object.entries(import.meta.glob('/src/content/blog/*.md'));
+    const post_meta = await resolver(posts)
     const pixelfed_feed = await fetchFromPixelfed();
     const photos = await pixelfed_feed.json()
     const photo_meta = photos.map(photo => {
         return makeMetaFromPixelfed(photo) 
     })
 
-    const allContent = dispatch_meta.concat(photo_meta)
+    const allContent = post_meta.concat(photo_meta)
     return allContent 
+}
+
+export const fetchForRSS = async (tag) => {
+    if (tag) {
+        return true 
+    }
+
+    const posts = Object.entries(import.meta.glob('/src/content/blog/*.md'))
+    const posts_and_content = await rssResolver(posts);
+    const pixelfed_feed = await fetchFromPixelfed();
+    const photos = await pixelfed_feed.json()
+    const photo_meta = photos.map(photo => {
+        return makeMetaFromPixelfed(photo) 
+    })
+
+
+    return posts_and_content.concat(photo_meta)
+
+}       
+
+const rssResolver = async (posts) => {
+    return Promise.all(
+        posts.map(async ([path, resolver]) => {
+            const resolved = await resolver();
+            const postPath = path.slice(12, -3);
+
+
+            return {
+                meta: resolved.metadata,
+                path: postPath,
+                content: resolved.default.render().html
+            } 
+        })
+    )
 }
