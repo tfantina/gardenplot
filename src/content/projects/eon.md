@@ -1,6 +1,6 @@
 ---
 title: 'Eon: Ruby Gem'
-hero: 'images/programming/kbyg/hero.png'
+hero: 'src/images/programming/kbyg/hero.png'
 alt: 'Eon Gem'
 daterange: 'May 2023'
 date: '2023-05-16'

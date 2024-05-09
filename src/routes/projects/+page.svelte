@@ -4,9 +4,7 @@
     export let data;
 </script>
 <p>
-I do a lot of random things a lot of them don't fall under the "programming" umbrella.  I'm proud of/interested in these projects, sometimes moreso than my programming projects.
-These projects will collect here as time goes on, some of them are programming based but more like exprements or little websites that I tried and failed to launch. Others 
-may be design or art projects or other random things.  Cheers.
+Rough timeline of various projects I've worked on.
 </p>
 
 <div class="d-flex flex-column">

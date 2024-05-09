@@ -1,6 +1,6 @@
 ---
 title: OptConnect
-hero: 'images/programming/optconnect/hero.png'
+hero: 'src/images/programming/optconnect/hero.png'
 alt: 'OptConnect'
 daterange: 'Jul 2020 - Dec 2020'
 date: '2020-07-01'

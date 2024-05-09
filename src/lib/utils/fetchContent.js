@@ -14,6 +14,7 @@ export const fetchContent = async (type) => {
 
     const allContent = Object.entries(allFiles);
     const content = await resolver(allContent)
+    console.log(content)
 
     return content;
 }
