@@ -31,21 +31,15 @@
             }
         });
 
-        console.log(pictures)
-
         for (const [path, src] of Object.entries(pictures)) {
             if (path.includes(image)) {
                 return await src();
             }
         }
     }
+
     let img = $page.data.image
-    let imgname
-    console.log(img)
-    console.log(imgname)
-    if ($page.data.image) {
-        imgname = $page.data.image.split(".")[0]
-    }
+
     
     
 </script>

@@ -1,0 +1,22 @@
+import { c as create_ssr_component } from "./ssr.js";
+const metadata = {
+  "title": "Today I Learned ~D[2024-01-03]",
+  "hero": "",
+  "alt": "",
+  "date": "2024-01-03",
+  "tags": ["TIL", "Elixir", "Programming"]
+};
+const Til_2024_01_03 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<p data-svelte-h="svelte-1qbfj5c">You can use Erlang’s <code>tc</code> function to see how many microseconds a function takes.  For example, say you were curious if <code>Enum.filter/2</code> or <code>Kernel.--/2</code> took longer:</p> <p data-svelte-h="svelte-8pgdxg">Example:</p> <pre class="language-elixir"><!-- HTML_TAG_START -->${`<code class="language-elixir">$iex<span class="token operator">></span> vals <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+$iex<span class="token operator">></span> <span class="token atom symbol">:timer</span><span class="token punctuation">.</span><span class="token function">tc</span><span class="token punctuation">(</span><span class="token module class-name">Enum</span><span class="token punctuation">,</span> <span class="token atom symbol">:filter</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>vals<span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token function">rem</span><span class="token punctuation">(</span><span class="token argument variable">&amp;1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span>
+
+$iex<span class="token operator">></span> <span class="token atom symbol">:timer</span><span class="token punctuation">.</span><span class="token function">tc</span><span class="token punctuation">(</span><span class="token module class-name">Kernel</span><span class="token punctuation">,</span> :<span class="token operator">--</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>vals<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span></code>`}<!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-kasxeq"><code>Kernel.--</code> or <code>vals -- [2, 4]</code> took 3 micro seconds while <code>Enum.filter/2</code> (<code>Enum.filter(vals, &amp; &amp;1rem(&amp;1, 2) == 1)</code>) took 20.</p> <p data-svelte-h="svelte-1k14b6d">This is a fairly trivial example but I could see this coming in handy with larger operations.
+For more detailed analysis you can always use <a href="https://github.com/bencheeorg/benchee" rel="nofollow">Benchee</a>.
+Thanks to <a href="https://til.hashrocket.com/posts/9jxsfxysey-timing-a-function-in-elixir" rel="nofollow">chriserin</a> for helping me get the right Erlang syntax for <code>tc</code></p>`;
+});
+export {
+  Til_2024_01_03 as default,
+  metadata
+};
