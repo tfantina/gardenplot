@@ -1,6 +1,6 @@
 ---
 title: Wild Elements Anouncement Page
-hero: 'images/programming/wildelements/hero.png'
+hero: './images/programming/wildelements/hero.png'
 alt: 'WildElements hero'
 daterange: 'Feb 2021'
 date: '2021-02-01'

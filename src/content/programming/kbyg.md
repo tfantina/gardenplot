@@ -1,6 +1,6 @@
 ---
 title: Know Before You Go
-hero: 'images/programming/kbyg/hero.png'
+hero: 'src/images/programming/kbyg/hero.png'
 alt: 'Know Before You Go'
 daterange: 'Apr - Oct 2022'
 date: '2022-04-01'

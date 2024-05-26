@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>The Web Garden of Travis Fantina</title>
+        <description>A collection of my projects and ideas</description>
+        <language>en</language>
+        <link>https://travisfantina.com</link>
+        
+            <item>
+                <title>Got stuck this morning, it was still there some 10 hours later.  I can&#039;t blame them, on a day like today West Vanco...</title>
+                <link>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/653463191348593627</link>
+                <pubDate>Thu, 18 Jan 2024 05:09:25 GMT</pubDate>
+                <guid>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/653463191348593627</guid>
+                <description>
+                    <![CDATA[<img src="https://pxscdn.com/public/m/_v2/646492890300139234/3b17271c9-2ea36d/zhQK4xgRZhaM/3HsTfvjutr2CYO2SK5EHW6ikws7sP1LyhIMru3GP.jpg" alt="Got stuck this morning, it was still there some 10 hours later.  I can&#039;t blame them, on a day like today West Vanco... - photo" />]]>
+                </description>
+            </item>
+       
+            <item>
+                <title>My daughter and I found a very special area off the beaten trail in West Vancouver, it was like a journey to a land out ...</title>
+                <link>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/652912491382395053</link>
+                <pubDate>Tue, 16 Jan 2024 16:41:08 GMT</pubDate>
+                <guid>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/652912491382395053</guid>
+                <description>
+                    <![CDATA[<img src="https://pxscdn.com/public/m/_v2/646492890300139234/3b17271c9-2ea36d/RxsjVd88guJ0/tE9FtWmQVRIz9KTSyzQfHndCLA8n8HS4Vrblo9Zu.jpg" alt="My daughter and I found a very special area off the beaten trail in West Vancouver, it was like a journey to a land out ... - photo" />]]>
+                </description>
+            </item>
+       
+            <item>
+                <title>Breaking at Stanley Park, I was helping my daughter with her camera, this caught us both a bit off guard....</title>
+                <link>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/651875082186608296</link>
+                <pubDate>Sat, 13 Jan 2024 19:58:50 GMT</pubDate>
+                <guid>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/651875082186608296</guid>
+                <description>
+                    <![CDATA[<img src="https://pxscdn.com/public/m/_v2/646492890300139234/3b17271c9-2ea36d/1GsumCgkkkq5/DO4uAzyum1qhmxsoMVgJJvemi49sj2FWkUQvknzh.jpg" alt="Breaking at Stanley Park, I was helping my daughter with her camera, this caught us both a bit off guard.... - photo" />]]>
+                </description>
+            </item>
+       
+            <item>
+                <title>Today I Learned ~D[2024-01-03]</title>
+                <link>https://travisfantina.com/blog//blog/til-2024-01-03</link>
+                <pubDate>Wed, 03 Jan 2024 00:00:00 GMT</pubDate>
+                <guid>https://travisfantina.com/blog//blog/til-2024-01-03</guid>
+                <description>
+                    <![CDATA[<p data-svelte-h="svelte-1qbfj5c">You can use Erlang’s <code>tc</code> function to see how many microseconds a function takes.  For example, say you were curious if <code>Enum.filter/2</code> or <code>Kernel.--/2</code> took longer:</p> <p data-svelte-h="svelte-8pgdxg">Example:</p> <pre class="language-elixir"><!-- HTML_TAG_START --><code class="language-elixir">$iex<span class="token operator">></span> vals <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+$iex<span class="token operator">></span> <span class="token atom symbol">:timer</span><span class="token punctuation">.</span><span class="token function">tc</span><span class="token punctuation">(</span><span class="token module class-name">Enum</span><span class="token punctuation">,</span> <span class="token atom symbol">:filter</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>vals<span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token function">rem</span><span class="token punctuation">(</span><span class="token argument variable">&amp;1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span>
+
+$iex<span class="token operator">></span> <span class="token atom symbol">:timer</span><span class="token punctuation">.</span><span class="token function">tc</span><span class="token punctuation">(</span><span class="token module class-name">Kernel</span><span class="token punctuation">,</span> :<span class="token operator">--</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>vals<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-kasxeq"><code>Kernel.--</code> or <code>vals -- [2, 4]</code> took 3 micro seconds while <code>Enum.filter/2</code> (<code>Enum.filter(vals, &amp; &amp;1rem(&amp;1, 2) == 1)</code>) took 20.</p> <p data-svelte-h="svelte-1k14b6d">This is a fairly trivial example but I could see this coming in handy with larger operations.
+For more detailed analysis you can always use <a href="https://github.com/bencheeorg/benchee" rel="nofollow">Benchee</a>.
+Thanks to <a href="https://til.hashrocket.com/posts/9jxsfxysey-timing-a-function-in-elixir" rel="nofollow">chriserin</a> for helping me get the right Erlang syntax for <code>tc</code></p>]]>
+                </description>
+            </item>
+       
+            <item>
+                <title>More images from our walk on Cypress mid-December.
+
+I&#039;ve been playing with Darkroom vs Photomator.  The colours are...</title>
+                <link>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/647645264305121130</link>
+                <pubDate>Tue, 02 Jan 2024 03:51:03 GMT</pubDate>
+                <guid>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/647645264305121130</guid>
+                <description>
+                    <![CDATA[<img src="https://pxscdn.com/public/m/_v2/646492890300139234/3b17271c9-2ea36d/Liogcbh2BpS0/V8tX9yhiYAdHr3jarcPtUoiWD8beJcJWbTtbfmJA.jpg" alt="More images from our walk on Cypress mid-December.
+
+I&#039;ve been playing with Darkroom vs Photomator.  The colours are... - photo" />]]>
+                </description>
+            </item>
+       
+            <item>
+                <title>A walk up Cypress. December 9th (I think), just processing a lot of my December photos now....</title>
+                <link>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/646564841947385434</link>
+                <pubDate>Sat, 30 Dec 2023 04:17:50 GMT</pubDate>
+                <guid>https://travisfantina.com/blog/https://pixelfed.social/p/tfantina/646564841947385434</guid>
+                <description>
+                    <![CDATA[<img src="https://pxscdn.com/public/m/_v2/646492890300139234/bc40e5d2a-3c51e6/Mhd72YoD82iq/5RkiKEY2MPiChX87kiIT2aj3wa6hRGtUnjbrigoT.jpg" alt="A walk up Cypress. December 9th (I think), just processing a lot of my December photos now.... - photo" />]]>
+                </description>
+            </item>
+       
+    </channel>
+</rss>
+

@@ -1,0 +1,8 @@
+const load = async ({ fetch }) => {
+  const response = await fetch(`/api/projects`);
+  const projects = await response.json();
+  return { projects, title: "Other Projects" };
+};
+export {
+  load
+};

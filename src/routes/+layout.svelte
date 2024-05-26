@@ -22,11 +22,25 @@
         theme ? setTheme(theme) : setTheme('forest')
     })
 
-    let img = $page.data.image
-    let imgname
-    if ($page.data.image) {
-        imgname = $page.data.image.split(".")[0]
+     async function importImage(image) {
+        const pictures = import.meta.glob(`/src/images/*/*/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}`, {
+            import: 'default',
+            query: {
+                enhanced: true,
+                w: '2400;2000;1600;1200;800;400'
+            }
+        });
+
+        for (const [path, src] of Object.entries(pictures)) {
+            if (path.includes(image)) {
+                return await src();
+            }
+        }
     }
+
+    let img = $page.data.image
+
+    
     
 </script>
 <ThemeSelect {setTheme} {currentTheme} />
@@ -36,11 +50,9 @@
         <svelte:fragment slot="headerimg">
             <div class="header-image">
                 {#if $page.data.image}
-                  <picture>
-                        <source srcset="{imgname}.webp" type="image/webp">
-                        <source srcset="{img}" type="image/jpeg">
-                        <img src="{img}" alt="{$page.data.title}" />
-                    </picture>
+                     {#await importImage(img) then src}
+                         <enhanced:img src={src} alt={$page.data.title} />
+                    {/await}
                 {/if}
             </div>
         </svelte:fragment>
