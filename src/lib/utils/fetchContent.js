@@ -2,8 +2,6 @@ import { fetchFromPixelfed, makeMetaFromPixelfed } from '$lib/utils';
 export const fetchContent = async (type) => {
     let allFiles;
     switch (type) {
-        case "programming": allFiles = import.meta.glob('/src/content/programming/*.md');
-            break;
         case "projects": allFiles = import.meta.glob('/src/content/projects/*.md');
             break;
         case "blog": 

@@ -6,6 +6,5 @@
     <NavButton text="Home" target={`${base}/`} />
     <NavButton text="Blog" target={`${base}/blog`} />
     <NavButton text="About" target={`${base}/about`} />
-    <NavButton text="Programming" target={`${base}/programming`} />
     <NavButton text="Projects" target={`${base}/projects`} />
 </footer>

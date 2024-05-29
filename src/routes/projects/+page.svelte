@@ -4,14 +4,19 @@
     export let data;
 </script>
 <p>
-I do a lot of random things a lot of them don't fall under the "programming" umbrella.  I'm proud of/interested in these projects, sometimes moreso than my programming projects.
-These projects will collect here as time goes on, some of them are programming based but more like exprements or little websites that I tried and failed to launch. Others 
-may be design or art projects or other random things.  Cheers.
+These are the projects I've worked on where I've either been the sole contributor or lead developer, while not a comprehensive list of the dozens of projects I've 
+helped out with these are the most significant (fixing Wordpress CSS dosen't count). Some of these projects are personal, some are professional. 
+</p>
+<p>
+Working for an agency there are some projects I can't go into details on. In some cases below I discuss some of the thorny technical 
+issues I've been able to tackle without naming specific projects or clients.
 </p>
 
 <div class="d-flex flex-column">
 {#each data.projects as project}
-    <Card path={`${base}${project.path}`} meta={project.meta} />
+    <div class="row pb-4">
+        <Card path={`${base}${project.path}`} meta={project.meta} />
+    </div>
 {/each}
 </div>
    

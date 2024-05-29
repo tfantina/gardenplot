@@ -6,18 +6,17 @@
     } 
 
     .links {
-        positon: relative;
+        position: relative;
         height: 100%;
     }
 
     .content {
-        positon: absolute;
-        width: 100%;
+        position: absolute;
     }
 }
 
 header {
-    height: calc($pad-2xl * 3);
+    height: calc($pad-2xl);
     max-width: 100%;
     position: relative;
     margin:  $pad-s 0 ;
@@ -47,6 +46,10 @@ header {
             object-fit: cover;
             border-radius: 10px;
         }
+    }
+
+    .logo-flow {
+        max-height: 90%;
     }
 }
 

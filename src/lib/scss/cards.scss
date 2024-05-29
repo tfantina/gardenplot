@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     transition: .5s;
-    margin-bottom: $pad-2xl;
+    border-radius: 4px;
 
    .tag:nth-child(n + 2) {
         margin-left: $pad-2xs;
@@ -79,6 +79,7 @@ a.no-underline {
 }
 
 .content-link:hover {
+    background-color: var(--bg-overlay);
     transform: scale(1.009);
 }
  
