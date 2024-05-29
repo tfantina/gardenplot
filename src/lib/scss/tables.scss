@@ -1,0 +1,16 @@
+.table-row {
+    display: flex;
+    align-content: center;
+    min-height: $text-xl;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.table-row:hover {
+    background-color: var(--bg-overlay);
+}
+
+
+.title-row {
+    font-weight: bold;
+}

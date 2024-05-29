@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One');
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "utopia.scss";
 @import "themes.scss";
@@ -6,13 +5,26 @@
 @import "layout.scss";
 @import "buttons.scss";
 @import "cards.scss";
+@import "tables.scss";
 
-$headings: 'Poetsen One', serif;
-$primary: 'Montserrat', sans-serif;
+
+
+@font-face {
+  font-family: tropikal;
+  src: url('/fonts/tropikal-bold.otf');
+};
+
+@font-face {
+    font-family: montserrat;
+    src: url('/fonts/Montserrat-Regular.ttf');
+}
+
+$headings: tropikal, serif;
+$primary: montserrat, sans-serif;
 
 body {
     font-family: $primary;
-    font-size: $text-sm;
+    font-size: $text;
 }
 
 h1 {
@@ -44,11 +56,22 @@ h5 {
     font-size: $text-sm;
 }
 
+code {
+    font-size: $text-sm;
+}
+
+pre {
+    border-radius: 2px;
+    padding: $pad-s;
+    background-color: var(--bg-overlay);
+}
+
 .tag {
     color: var(--content-accent);
-    font-size: $text-xs;
-    padding: $pad-3xs;
-    border-radius: 6px;
+    font-size: $text-sm;
+    padding: calc($pad-3xs / 2);
+    margin: $pad-3xs;
+    border-radius: 2px;
     border: solid 1px var(--links);
 
     a {
@@ -65,7 +88,7 @@ h5 {
 
 .meta {
     color: var(--content-accent);
-    font-size: $text-xs;
+    font-size: $text-sm;
 }
 
 .photo {

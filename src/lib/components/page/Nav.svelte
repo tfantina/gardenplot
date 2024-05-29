@@ -7,20 +7,19 @@
     <div class="links">
        <div class="content mr-5 p-3 rounded-3 d-flex flex-column align-items-center">
                 <NavButton text="Home" target={`${base}/`} />
-                <NavButton text="Blog" target={`${base}/blog`} />
-                <NavButton text="About" target={`${base}/about`} />
-                <NavButton text="Programming" target={`${base}/programming`} />
                 <NavButton text="Projects" target={`${base}/projects`} />
+                <NavButton text="Blog" target={`https://travisblog.fly.dev/`} />
+                <NavButton text="About" target={`${base}/about`} />
         </div>
     </div>
 </div>
 
 <style>
     .links {
-        positon: relative;
+        position: relative;
         height: 100%;
     }
     .content {
-        positon: absolute;
+        position: absolute;
     }
 </style>

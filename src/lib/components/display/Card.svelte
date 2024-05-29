@@ -21,7 +21,7 @@
         {/if}
     </div>
     <div class="content-link--content d-flex flex-column justify-content-center">
-        <h5>{title}</h5>   
+        <h4>{title}</h4>   
         <div class="meta d-flex flex-row">
             <div class="d-flex flex-column">
                 {#if daterange}
