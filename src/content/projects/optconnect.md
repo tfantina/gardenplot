@@ -7,7 +7,7 @@ date: '2020-07-01'
 tags: ['CraftCMS', 'Twig']
 ---
 <script>
-    import Image from '../../lib/components/content/image.svelte'
+    import Image from '../../lib/components/content/Image.svelte'
 </script>
 
 
