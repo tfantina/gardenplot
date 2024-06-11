@@ -8,7 +8,7 @@
        <div class="content mr-5 p-3 rounded-3 d-flex flex-column align-items-center">
                 <NavButton text="Home" target={`${base}/`} />
                 <NavButton text="Projects" target={`${base}/projects`} />
-                <NavButton text="Blog" target={`https://travisblog.fly.dev/`} />
+                <NavButton text="Blog" target={`https://blog.travisfantina.com/`} />
                 <NavButton text="About" target={`${base}/about`} />
         </div>
     </div>
