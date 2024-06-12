@@ -7,7 +7,7 @@ html[data-theme="forest"] {
     --accent-overlay: #{$forest-accent-overlay};
     --bg-overlay: #{$forest-bg-overlay};
     --headings: #{$forest-headdings};
-    --links:  #{$forest-primary};
+    --links:  #{$forest-primary-dark};
 }
 
 html[data-theme="creamsicle"] {
@@ -15,11 +15,11 @@ html[data-theme="creamsicle"] {
     --primary: #{$creamsicle-primary};
     --primary-dark: #{$creamsicle-primary-dark};
     --content-bg: #{$creamsicle-bg};
-    --content-accent: #{$creamsicle-accent};
+    --content-accent: #{$creamsicle-accent-overlay};
     --accent-overlay: #{$creamsicle-accent-overlay};
     --bg-overlay: #{$creamsicle-bg-overlay}; 
     --headings: #{$creamsicle-text};
-    --links:  #{$creamsicle-primary};
+    --links:  #{$creamsicle-primary-dark};
 }
 
 html[data-theme="nightly"] {

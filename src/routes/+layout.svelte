@@ -10,6 +10,10 @@
 
     let theme;
     let currentTheme = writable(theme);
+    const siteName = "Travis Fantina"
+    const pageTitle = $page.data?.title ? ` | ${$page.data.title}` : ""
+
+    $: title = `${siteName} ${pageTitle}`
 
     const setTheme = (theme) => {
         window.localStorage.setItem('theme', theme);
@@ -29,6 +33,9 @@
     }
     
 </script>
+<svelte:head>
+    <title>{title}</title>
+</svelte:head>
 <ThemeSelect {setTheme} {currentTheme} />
 <div class="container">
     <Header>

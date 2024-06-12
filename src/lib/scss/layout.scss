@@ -15,19 +15,22 @@
     }
 }
 
+.container {
+    padding: 0;
+}
+
 header {
     height: calc($pad-2xl);
-    max-width: 100%;
     position: relative;
     margin:  $pad-s 0 ;
     padding: 0;
 
+    img {
+        height: calc($pad-2xl);
+    }
+
     .header-content {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        position: absolute;
         width: 100%;
         height: 100%;
     }
@@ -48,8 +51,23 @@ header {
         }
     }
 
-    .logo-flow {
+    .logo-img {
         max-height: 90%;
+        margin-right: $pad-lg;
+        order: 2;
+
+        @include media-sm {
+            order: 1;
+        }
+
+    }
+
+    .title-row {
+        order: 1;
+
+        @include media-sm {
+            order: 2;
+        }
     }
 }
 

@@ -1,10 +1,13 @@
-<header class="d-flex justify-content-center rounded-3">
-        <div class="header-content d-flex">
-                <div class="col-lg-2 logo-flow d-flex justify-end">
-                        <img src="/images/storage/logo.svg" alt="Travis Fantina initials as an SVG logo">
-                </div>
-                <div class="col-lg-10 d-flex justify-center">
-                        <h1><slot name="title" /></h1>
+<header class="d-flex">
+        <div class="col-2 col-md-3 col-lg-2"></div>
+        <div class="col-md-9 col-lg-10">
+                <div class="header-content d-flex">
+                        <div class="logo-img d-flex justify-end">
+                                <img src="/images/storage/logo.svg" class="header-logo" alt="Travis Fantina initials as an SVG logo">
+                        </div>
+                        <div class="title-row d-flex align-center">
+                                <h1><slot name="title" /></h1>
+                        </div>
                 </div>
         </div>
 </header>
