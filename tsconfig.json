@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "module": "es2020",
+        "types": ["vite/client"]
+    },
+    "include": ["src/**/*", "src/**/*.d.ts"]
+}
