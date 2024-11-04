@@ -7,12 +7,12 @@
 @import "cards.scss";
 @import "tables.scss";
 @import "images.scss";
-
-
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Tiny5&display=swap');
 
 @font-face {
-  font-family: tropikal;
-  src: url('/fonts/tropikal-bold.otf');
+    font-family: tiny5, sans-serif; 
+    src: url('/fonts/Tiny5-regular.ttf');
 };
 
 @font-face {
@@ -20,7 +20,7 @@
     src: url('/fonts/Montserrat-Regular.ttf');
 }
 
-$headings: tropikal, serif;
+$headings: tiny5, serif;
 $primary: montserrat, sans-serif;
 
 body {
@@ -30,7 +30,7 @@ body {
 
 h1 {
     font-family: $headings;
-    font-size: $text-h2
+    font-size: $text-h2;
 }
 
 h2 {
@@ -40,19 +40,19 @@ h2 {
 }
 
 h3 {
-    font-family: $primary;
+    font-family: $headings;
     font-weight: 700;
     font-size: $text-h3;
 }
 
 h4 {
-    font-family: $primary;
+    font-family: $headings;
     font-weight: 700;
     font-size: $text;
 }
 
 h5 {
-    font-family: $primary;
+    font-family: $headings;
     font-weight: 700;
     font-size: $text-sm;
 }

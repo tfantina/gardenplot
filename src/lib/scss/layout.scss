@@ -1,5 +1,6 @@
 .nav-container {
     display: none;
+    grid-area: n;
 
     @include media-md {
         display: flex;
@@ -10,17 +11,38 @@
         height: 100%;
     }
 
-    .content {
-        position: absolute;
+}
+
+.content-container {
+   display: grid;
+   grid-auto-flow: column;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "b b b b b b b b b b b b"
+        "b b b b b b b b b b b b";
+    grid-gap: $pad-lg;
+    grid-template-rows: 55px auto auto;
+
+    @include media-md {
+        width: 90%;
+        grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "n n b b b b b b b b b b"
+        "n n b b b b b b b b b b";
+    }
+
+    @include media-xl {
+        width: 80%;
     }
 }
 
-.container {
-    padding: 0;
-}
-
 header {
-    height: calc($pad-2xl);
+    grid-area: h;
+    height: calc($pad-xl);
     position: relative;
     margin:  $pad-s 0 ;
     padding: 0;
@@ -52,12 +74,18 @@ header {
     }
 
     .logo-img {
-        max-height: 90%;
+        height: 100%;
         margin-right: $pad-lg;
         order: 2;
 
         @include media-sm {
             order: 1;
+        }
+
+        img {
+            height: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
         }
 
     }
@@ -70,6 +98,11 @@ header {
         }
     }
 }
+
+main {
+    grid-area: b;
+}
+
 
 footer {
     display: flex;

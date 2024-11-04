@@ -2,7 +2,6 @@
     import { base } from '$app/paths';
     import Card from '$lib/components/display/Card.svelte';
     export let data
-
 </script>
 
 <div class="d-flex flex-column">

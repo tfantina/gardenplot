@@ -37,7 +37,7 @@
     <title>{title}</title>
 </svelte:head>
 <ThemeSelect {setTheme} {currentTheme} />
-<div class="container">
+<div class="content-container">
     <Header>
         <span slot="title">{$page.data.title}</span>
         <svelte:fragment slot="headerimg">
@@ -52,11 +52,9 @@
             </div>
         </svelte:fragment>
     </Header>
-    <div class="d-flex">
-        <Nav />
-        <div class="col-md-9 col-lg-10 content rounded-3 p-4">
-            <slot /> 
-        </div>
-    </div>
+    <Nav />
+    <main>
+        <slot /> 
+    </main>
 </div>
 <MobileFooter />

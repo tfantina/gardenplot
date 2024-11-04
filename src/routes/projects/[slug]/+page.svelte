@@ -6,4 +6,6 @@
     export let data;
 </script>
 
-<svelte:component this={data.content}  />
+<div class="content rounded-3 p-4">
+    <svelte:component this={data.content}  />
+</div>
