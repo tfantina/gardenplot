@@ -1,3 +1,4 @@
+<div class="content rounded-3 p-4">
 <h2>About</h2>
 <p>
     I'm not enough of a celebrity to assume that if you are here you don't already know me. I won't droll on about biographic details. 
@@ -34,4 +35,5 @@
     You can write your thoughts in a text editor, save them as a `.html` file and host them online.  If you'd like help 
     feel free to shoot me an email: <a href="mailto:self@travisfantina.com">self[at]travisfantina[dot]com</a>.
 </p>
+</div>
 

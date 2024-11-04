@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5 {
 
 .content {
     background-color: var(--content-bg);
+    border: solid var(--links) 1.5px;
 }
 
 .theme-box {

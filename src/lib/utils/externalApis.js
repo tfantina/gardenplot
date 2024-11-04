@@ -30,3 +30,33 @@ export const makeMetaFromPixelfed = (photo) => {
         "path": photo.link
     }
 }
+
+export const fetchBlogPosts = async () => {
+    const recent_posts = await fetch(`https://blog.travisfantina.com/tag/programming/rss/`)
+        .then(res => res.text())
+        .then(xml => {
+            let parsed = []
+
+            try {
+                getPosts(xml, parsed)
+            }
+            catch (err) {
+                console.log(err, "Err retreving posts")
+            }
+            return parsed  
+        })
+
+    return recent_posts
+}
+
+const getPosts = (xml, parsed) => {
+    const parser = new XMLParser()
+    const { rss: { channel: { item: items } } } = parser.parse(xml) 
+    for (const itm of items) {
+        parsed.push({ title: itm.title, link: getLink(itm), date: itm.pubDate })
+    }
+}
+
+const getLink = (itm) => {
+    return itm.link.replace("https://travisblog.fly.dev/", "https://blog.travisfantina.com/")
+}
