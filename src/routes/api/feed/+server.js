@@ -2,41 +2,40 @@ import { fetchContent, fetchContentByTag } from '$lib/utils';
 import { json } from '@sveltejs/kit';
 
 export const GET = async ({ url }) => {
-    let sortedProjects, tags;
-    const tag = url.searchParams.get("tag")
+	let sortedPosts, tags;
+	const tag = url.searchParams.get('tag');
 
-    if (tag) {
-        const allProjects = await fetchContentByTag(tag)
+	if (tag) {
+		const allProjects = await fetchContentByTag(tag);
 
-        sortedProjects = allProjects.sort((a, b) => {
-            return new Date(b.meta.date) - new Date(a.meta.date);
-        });
+		sortedPosts = allProjects.sort((a, b) => {
+			return new Date(b.meta.date) - new Date(a.meta.date);
+		});
 
-        const unique = (val, index, array) => {
-            return array.indexOf(val) === index
-        } 
+		const unique = (val, index, array) => {
+			return array.indexOf(val) === index;
+		};
 
-        tags = sortedProjects.flatMap(proj => {
-            return proj.meta.tags.map(tag => tag.toLowerCase())
-        }).filter(unique)
-    }
-    else {
-        const allProjects = await fetchContent('blog');
-
-        sortedProjects = allProjects.sort((a, b) => {
-            return new Date(b.meta.date) - new Date(a.meta.date);
-        });
-
-        const unique = (val, index, array) => {
-            return array.indexOf(val) === index
-        } 
-
-        tags = sortedProjects.flatMap(proj => {
-            return proj.meta.tags.map(tag => tag.toLowerCase())
-        }).filter(unique)
-    }
+		tags = [tag]
+	} else {
+		const allPosts = await fetchContent('blog');
 
 
-    return json({ content: sortedProjects, tags: tags })
-}
+		sortedPosts = allPosts.sort((a, b) => {
+			return new Date(b.meta.date) - new Date(a.meta.date);
+		});
 
+		const unique = (val, index, array) => {
+			return array.indexOf(val) === index;
+		};
+
+		tags = sortedPosts
+			.flatMap((proj) => {
+				return proj.meta.tags.map((tag) => tag.toLowerCase());
+			})
+			.filter(unique)
+			.sort()
+	}
+
+	return json({ content: sortedPosts, tags: tags });
+};

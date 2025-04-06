@@ -1,158 +1,170 @@
-.content-link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: .5s;
-    border-radius: 4px;
+a:has(.card) {
+	text-decoration: none;
+	transition: .5s
+}
 
-   .tag:nth-child(n + 2) {
-        margin-left: $pad-2xs;
-   }
+a:has(.card):hover {
+	transform: scale(1.01) rotate(.2deg);
+}
+
+
+.content-link {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	transition: 0.5s;
+	border-radius: 4px;
+
+	.tag:nth-child(n + 2) {
+		margin-left: $pad-2xs;
+	}
 }
 
 .content-link--image {
-    position: relative;
-    z-index: 500;
-    height: $pad-2xl;
-    width: calc($pad-2xl * 1.5);
-    overflow: hidden;
-    background-color: var(--primary);
-    border-radius: 8px;
+	position: relative;
+	z-index: 500;
+	height: $pad-2xl;
+	width: calc($pad-2xl * 1.5);
+	overflow: hidden;
+	background-color: var(--primary);
+	border-radius: 8px;
 
-    & img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
+	& img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
 }
 
 .content-link--content {
-    height: 100%;
-    display: flex;
-    position: relative;
-    z-index: 100;
-    width: 100%;
-    margin-left: -30px;
-    padding-left: 40px;
-    margin-bottom: $pad-2xs;
-    object-fit: cover;
-    background-size: cover;   
-    border-radius: 8px;
+	height: 100%;
+	display: flex;
+	position: relative;
+	z-index: 100;
+	width: 100%;
+	margin-left: -30px;
+	padding-left: 40px;
+	margin-bottom: $pad-2xs;
+	object-fit: cover;
+	background-size: cover;
+	border-radius: 8px;
 }
 
 .content-link--content__tag {
-    margin-left: 2rem; 
+	margin-left: 2rem;
 }
 
 .content-link--inner {
-    height: 100%;
-    width: 100%;
-    background-color: #fff;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
 }
 
 .content-link--gradient {
-    height: 100%;
-    width: 100%;
-    background: rgb(255,0,0);
-    background: linear-gradient(69deg, rgba(255,0,0,1) 0%, rgba(255,134,0,1) 25%, rgba(255,254,4,1) 50%, rgba(0,255,40,1) 75%, rgba(31,0,255,1) 100%); 
-    filter: hue-rotate(1) saturate(100) blur(20px);
-    animation: hueshifter;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    opacity: .7;
+	height: 100%;
+	width: 100%;
+	background: rgb(255, 0, 0);
+	background: linear-gradient(
+		69deg,
+		rgba(255, 0, 0, 1) 0%,
+		rgba(255, 134, 0, 1) 25%,
+		rgba(255, 254, 4, 1) 50%,
+		rgba(0, 255, 40, 1) 75%,
+		rgba(31, 0, 255, 1) 100%
+	);
+	filter: hue-rotate(1) saturate(100) blur(20px);
+	animation: hueshifter;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	opacity: 0.7;
 }
 
 @keyframes hueshifter {
-    from {
-        filter: hue-rotate(0deg) saturate(30) blur(50px);
-    }
-    to {
-        filter: hue-rotate(360deg) saturate(30) blur(50px);
-    }
+	from {
+		filter: hue-rotate(0deg) saturate(30) blur(50px);
+	}
+	to {
+		filter: hue-rotate(360deg) saturate(30) blur(50px);
+	}
 }
 
-
-
 a.no-underline {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .content-link:hover {
-    background-color: var(--bg-overlay);
-    transform: scale(1.009);
+	background-color: var(--bg-overlay);
+	transform: scale(1.009);
 }
- 
 
-.card  {
-    position: relative;
-    background-color: var(--content-bg);
-    border: solid var(--links) 1.5px;
-    flex: 1;
-    margin: $pad-s $pad-s 0 0; 
-    padding: $pad-2xs;
+.card {
+	position: relative;
+	background-color: var(--content-bg);
+	border: solid var(--links) 2px;
+	flex: 1;
+	margin: $pad-s $pad-s 0 0;
+	padding: $pad-2xs;
 }
 
 .card:last-of-type {
-    margin-right: 0;
+	margin-right: 0;
 }
 
 .card-no-overflow {
-    max-height: 300px;
-    overflow: scroll;
+	max-height: 300px;
+	overflow: scroll;
 }
 
 // .music-card {
 //     position: relative;
 // }
 
-
 .song-card {
-    font-size: $text-sm;
-    width: 100%;
-    display: flex;
-    padding: $pad-3xs $pad-xs;
+	font-size: $text-sm;
+	width: 100%;
+	display: flex;
+	padding: $pad-3xs $pad-xs;
 
-    &--art {
-        float: left;
-        min-height: 10px;
-        width: 20%;
-        margin-right: $pad-xs;
-        transition: all .25s ease-in-out;
-        position: relative;
+	&--art {
+		float: left;
+		min-height: 10px;
+		width: 20%;
+		margin-right: $pad-xs;
+		transition: all 0.25s ease-in-out;
+		position: relative;
 
-        img {
-            width: 100%;
-            border-radius: 2px;
-        }
-    }
+		img {
+			width: 100%;
+			border-radius: 2px;
+		}
+	}
 
-    // &--art:hover {
-    //     position: absolute;
-    //     transform: scale(3);
-    //     z-index: 500;
-    // }
+	// &--art:hover {
+	//     position: absolute;
+	//     transform: scale(3);
+	//     z-index: 500;
+	// }
 
-    &--title {
-        width: 100%;
-        font-weight: bolder;
-    }
+	&--title {
+		width: 100%;
+		font-weight: bolder;
+	}
 
-    &--listened {
-        font-size: $text-xs;
-    }
+	&--listened {
+		font-size: $text-xs;
+	}
 }
 
-
 a.post-card {
-    font-size: $text;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: $pad-3xs $pad-xs;
-    text-decoration: none;
-    text-decoration-stlye: wavy;
+	font-size: $text;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: $pad-3xs $pad-xs;
+	text-decoration: none;
+	text-decoration-stlye: wavy;
 
-    &--title {
-    }
+	&--title {
+	}
 }

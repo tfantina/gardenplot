@@ -1,10 +1,13 @@
 <script>
-    export let title;
+    export let path, title;
 </script>   
 
-<div class="card">
-    <div class="row text-center">
-        <h4>{title}</h4>
+<a href={path}>
+    <div class="card">
+        <div class="row text-center">
+            <h4>{title}</h4>
+        </div>
+
+        <slot />
     </div>
-    <slot />
-</div>
+</a>

@@ -11,8 +11,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Tiny5&display=swap');
 
 @font-face {
-    font-family: tiny5, sans-serif; 
-    src: url('/fonts/Tiny5-regular.ttf');
+    font-family: notable, sans-serif; 
+    src: url('/fonts/Notable-regular.ttf');
 };
 
 @font-face {
@@ -20,7 +20,7 @@
     src: url('/fonts/Montserrat-Regular.ttf');
 }
 
-$headings: tiny5, serif;
+$headings: notable, serif;
 $primary: montserrat, sans-serif;
 
 body {
