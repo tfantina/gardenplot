@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { supabase } from '$lib/utils';
+//import { supabase } from '$lib/utils';
 
 export const lastFM = async (from?: string) => {
     const timestamp = from || "1 Sep 2024, 20:58"
@@ -20,7 +20,7 @@ const fetchSongs = async (url) => {
 }
 
 export const updateTrackListing = async () => {
-    const { data: latestPlay } = await supabase.from('plays').select('created_at').order('created_at').limit(1);
+    //  const { data: latestPlay } = await supabase.from('plays').select('created_at').order('created_at').limit(1);
 
     const songs = await lastFM(latestPlay);
 
@@ -28,14 +28,14 @@ export const updateTrackListing = async () => {
     const insert_albums = songs.map(song => ({ name: song.album, artist: song.artist, image: song.image })) 
     const insert_songs = songs.map(song => ({ title: song.title, artist: song.artist, album: song.album }))
 
-    const { data: artists } = await supabase.from("artists").select('id', 'name').in('name', songs.map(song => song.artist))
+    // const { data: artists } = await supabase.from("artists").select('id', 'name').in('name', songs.map(song => song.artist))
 
-    const { data: tracks, error: errr } = await supabase.from("tracks")
-        .select('id', 'name', 'artist_id', 'album_id')
-        .or(songs.map(song => `and(title.eq.${song.title},artist_id.eq.${song.artist_id})`).join(', '))
+    // const { data: tracks, error: errr } = await supabase.from("tracks")
+    //     .select('id', 'name', 'artist_id', 'album_id')
+    //     .or(songs.map(song => `and(title.eq.${song.title},artist_id.eq.${song.artist_id})`).join(', '))
 
-    const { data: albums } = await supabase.from("albums").select('id', 'name').in('name', songs.map(song => song.album))
-    //    const { data: tracks } = await supabase.from("tracks").select('id', 'name',)
+    // const { data: albums } = await supabase.from("albums").select('id', 'name').in('name', songs.map(song => song.album))
+    // //    const { data: tracks } = await supabase.from("tracks").select('id', 'name',)
 
 }
 
