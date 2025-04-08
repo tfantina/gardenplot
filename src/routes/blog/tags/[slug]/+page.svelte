@@ -1,16 +1,20 @@
 <script>
     import { base } from '$app/paths';
     import Card from '$lib/components/display/Card.svelte';
-    export let data
+    import Tags from '$lib/components/display/Tags.svelte'
+    import ShortPost from '$lib/components/display/ShortPost.svelte'
+    export let data;
 </script>
 
 <div class="d-flex flex-column">
-<div class="d-flex align-center">
-    All posts tagged with: <div class="tag mx-1">{data.title}</div>
-</div>
-
+<p>
+    Something akin to a blog. Thoughts, photos, and relevant updates are collected here, click a tag to narrow by interest.
+</p>
+<Tags tags={data.tags} />
 {#each data.posts as post}
-    <Card path={`${base}${post.path}`} meta={post.meta} />
+    <Card path={`${base}${post.path}`} title={post.meta.title} >
+        <ShortPost meta={post.meta} />
+    </Card>
 {/each}
 </div>
    

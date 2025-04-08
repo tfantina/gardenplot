@@ -1,96 +1,99 @@
-html[data-theme="forest"] {
-    --text: #{$forest-text};
-    --primary: #{$forest-primary};
-    --primary-dark: #{$forest-primary-dark};
-    --content-bg: #{$forest-bg};
-    --content-accent: #{$forest-accent};
-    --accent-overlay: #{$forest-accent-overlay};
-    --bg-overlay: #{$forest-bg-overlay};
-    --headings: #{$forest-headdings};
-    --links:  #{$forest-primary-dark};
+html[data-theme='forest'] {
+	--text: #{$forest-text};
+	--primary: #{$forest-primary};
+	--primary-dark: #{$forest-primary-dark};
+	--content-bg: #{$forest-bg};
+	--content-accent: #{$forest-accent};
+	--accent-overlay: #{$forest-accent-overlay};
+	--bg-overlay: #{$forest-bg-overlay};
+	--headings: #{$forest-headdings};
+	--links: #{$forest-primary-dark};
 }
 
-html[data-theme="creamsicle"] {
-    --text: #{$creamsicle-text};
-    --primary: #{$creamsicle-primary};
-    --primary-dark: #{$creamsicle-primary-dark};
-    --content-bg: #{$creamsicle-bg};
-    --content-accent: #{$creamsicle-accent-overlay};
-    --accent-overlay: #{$creamsicle-accent-overlay};
-    --bg-overlay: #{$creamsicle-bg-overlay}; 
-    --headings: #{$creamsicle-text};
-    --links:  #{$creamsicle-primary-dark};
+html[data-theme='creamsicle'] {
+	--text: #{$creamsicle-text};
+	--primary: #{$creamsicle-primary};
+	--primary-dark: #{$creamsicle-primary-dark};
+	--content-bg: #{$creamsicle-bg};
+	--content-accent: #{$creamsicle-accent-overlay};
+	--accent-overlay: #{$creamsicle-accent-overlay};
+	--bg-overlay: #{$creamsicle-bg-overlay};
+	--headings: #{$creamsicle-text};
+	--links: #{$creamsicle-primary-dark};
 }
 
-html[data-theme="nightly"] {
-    --text: #{$nightly-text};
-    --primary: #{$nightly-primary};
-    --primary-dark: #{$nightly-primary-dark};
-    --content-bg: #{$nightly-bg};
-    --content-accent: #{$nightly-accent};
-    --accent-overlay: #{$nightly-accent-overlay};
-    --bg-overlay: #{$nightly-bg-overlay}; 
-    --headings: #{$nightly-heading};
-    --links:  #{$nightly-text};
+html[data-theme='nightly'] {
+	--text: #{$nightly-text};
+	--primary: #{$nightly-primary};
+	--primary-dark: #{$nightly-primary-dark};
+	--content-bg: #{$nightly-bg};
+	--content-accent: #{$nightly-accent};
+	--accent-overlay: #{$nightly-accent-overlay};
+	--bg-overlay: #{$nightly-bg-overlay};
+	--headings: #{$nightly-heading};
+	--links: #{$nightly-text};
 }
 
 body {
-    background-color: var(--primary);
-    color: var(--text);
+	background-color: var(--primary);
+	color: var(--text);
 }
 
-h1, h2, h3, h4, h5 {
-    color: var(--headings);
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: var(--headings);
 }
 
 .content {
-    background-color: var(--content-bg);
+	background-color: var(--content-bg);
+	border: solid var(--links) 2px;
 }
 
 .theme-box {
-    display: flex;
-    justify-content: flex-end;
-    z-index: 5000;
-    position: fixed;
-    padding: $pad-xs;
-    top: 0;
-    width: 215px;
-    margin-left: -150px;
-    transition: .3s;
-    background-color: var(--primary);
-    border-bottom-right-radius: 8px;
+	display: flex;
+	justify-content: flex-end;
+	z-index: 5000;
+	position: fixed;
+	padding: $pad-xs;
+	top: 0;
+	width: 215px;
+	margin-left: -150px;
+	transition: 0.3s;
+	background-color: var(--primary);
+	border-bottom-right-radius: 8px;
 
-    &--all {
-        padding: 0 $pad-3xs;
-    }
+	&--all {
+		padding: 0 $pad-3xs;
+	}
 
-    &--current {
-        padding: 0 $pad-3xs;
-        border-left: solid 3px var(--content-accent);
-    }
+	&--current {
+		padding: 0 $pad-3xs;
+		border-left: solid 3px var(--content-accent);
+	}
 }
 
 .theme-box:hover {
-    margin-left: 0;
+	margin-left: 0;
 }
 
-
-
 .themable {
-    height: 35px;
-    width: 35px;
-    border-radius: 100%;
-    border: solid 2px var(--text);
+	height: 35px;
+	width: 35px;
+	border-radius: 100%;
+	border: solid 2px var(--text);
 }
 
 .themable.forest {
-    background: linear-gradient(-45deg, $forest-primary 50%, $forest-bg 50%);
+	background: linear-gradient(-45deg, $forest-primary 50%, $forest-bg 50%);
 }
 
 .themable.creamsicle {
-    background: linear-gradient(-45deg, $creamsicle-primary 50%, $creamsicle-bg 50%);
+	background: linear-gradient(-45deg, $creamsicle-primary 50%, $creamsicle-bg 50%);
 }
 
 .themable.nightly {
-    background: linear-gradient(-45deg, $nightly-primary 50%, $nightly-bg 50%);
+	background: linear-gradient(-45deg, $nightly-primary 50%, $nightly-bg 50%);
 }
