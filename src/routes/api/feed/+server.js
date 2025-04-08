@@ -11,30 +11,19 @@ export const GET = async ({ url }) => {
 		sortedPosts = allProjects.sort((a, b) => {
 			return new Date(b.meta.date) - new Date(a.meta.date);
 		});
-
-		const unique = (val, index, array) => {
-			return array.indexOf(val) === index;
-		};
-
-		tags = [tag]
+		tags = [tag];
 	} else {
 		const allPosts = await fetchContent('blog');
-
-
 		sortedPosts = allPosts.sort((a, b) => {
 			return new Date(b.meta.date) - new Date(a.meta.date);
 		});
-
-		const unique = (val, index, array) => {
-			return array.indexOf(val) === index;
-		};
-
+		
+		// Get all unique tags
+		const unique = (val, index, array) => array.indexOf(val) === index;
 		tags = sortedPosts
-			.flatMap((proj) => {
-				return proj.meta.tags.map((tag) => tag.toLowerCase());
-			})
+			.flatMap((proj) => proj.meta.tags.map((tag) => tag.toLowerCase()))
 			.filter(unique)
-			.sort()
+			.sort();
 	}
 
 	return json({ content: sortedPosts, tags: tags });
