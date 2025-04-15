@@ -1,7 +1,7 @@
 <script>
-    export let path, divClass, alt;
+	export let path, divClass, alt;
 </script>
 
 <div class="image {divClass}">
-    <img src="{path}" alt="{alt}"/>
+	<img src={path} {alt} />
 </div>
