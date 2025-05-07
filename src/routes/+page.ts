@@ -5,7 +5,7 @@ export const prerender = true;
 
 export const load = async ({ fetch, params }) => {
 	try {
-		const response = await fetch(`/api/feed`);
+		const response = await fetch(`/api/feed?limit=10`);
 		if (!response.ok) {
 			throw new Error(`HTTP error! status: ${response.status}`);
 		}
