@@ -1,5 +1,4 @@
 <div class="content rounded-3 p-4">
-<h2>About</h2>
 <p>
     I'm not enough of a celebrity to assume that if you are here you don't already know me. I won't droll on about biographic details. 
 </p>
@@ -23,7 +22,7 @@
     web away from the silos of the 2000s and 2010s. 
 </p>
 
-<h2>About this Website</h2>
+<h3>About this Website</h3>
 <p>
     This website was built with SvelteKit because I enjoy Svelte and it's a fast way to get ideas out of my head and into a browser.
     At the moment there are <strong>0</strong> cookies on this website. No trackers, no CTAs and no SEO. It's just a website, 

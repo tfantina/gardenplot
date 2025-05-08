@@ -1,109 +1,106 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "utopia.scss";
-@import "themes.scss";
-@import "cardinal/app.scss";
-@import "layout.scss";
-@import "buttons.scss";
-@import "cards.scss";
-@import "tables.scss";
-@import "images.scss";
-@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Tiny5&display=swap');
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'utopia.scss';
+@import 'themes.scss';
+@import 'cardinal/app.scss';
+@import 'layout.scss';
+@import 'buttons.scss';
+@import 'cards.scss';
+@import 'tables.scss';
+@import 'images.scss';
 
 @font-face {
-    font-family: sansita, sans-serif; 
-    src: url('/fonts/Sansita-Bold.ttf');
-};
+	font-family: sansita;
+	src: url('/fonts/Sansita-Bold.ttf');
+}
 
 @font-face {
-    font-family: montserrat;
-    src: url('/fonts/Montserrat-Regular.ttf');
+	font-family: montserrat;
+	src: url('/fonts/Montserrat-Regular.ttf');
 }
 
 $headings: sansita, serif;
 $primary: montserrat, sans-serif;
 
 body {
-    font-family: $primary;
-    font-size: $text;
+	font-family: $primary;
+	font-size: $text;
 }
 
 h1 {
-    font-family: $headings;
-    font-size: $text-h2;
+	font-family: $headings;
+	font-size: $text-h2;
 }
 
 h2 {
-    font-family: $primary;
-    font-weight: 700;
-    font-size: $text-h2;
+	font-family: $primary;
+	font-weight: 700;
+	font-size: $text-h2;
 }
 
 h3 {
-    font-family: $headings;
-    font-weight: 700;
-    font-size: $text-h3;
+	font-family: $headings;
+	font-weight: 700;
+	font-size: $text-h3;
 }
 
 h4 {
-    font-family: $headings;
-    font-weight: 700;
-    font-size: $text;
+	font-family: $headings;
+	font-weight: 700;
+	font-size: $text;
 }
 
 h5 {
-    font-family: $headings;
-    font-weight: 700;
-    font-size: $text-sm;
+	font-family: $headings;
+	font-weight: 700;
+	font-size: $text-sm;
 }
 
 code {
-    font-size: $text-sm;
+	font-size: $text-sm;
 }
 
 pre {
-    border-radius: 2px;
-    padding: $pad-s;
-    background-color: var(--bg-overlay);
+	border-radius: 2px;
+	padding: $pad-s;
+	background-color: var(--bg-overlay);
 }
 
 .tag {
-    color: var(--content-accent);
-    font-size: $text-sm;
-    padding: calc($pad-3xs / 2);
-    margin: $pad-3xs;
-    border-radius: 2px;
-    border: solid 1px var(--links);
+	color: var(--content-accent);
+	font-size: $text-sm;
+	padding: calc($pad-3xs / 2);
+	margin: $pad-3xs;
+	border-radius: 2px;
+	border: solid 1px var(--links);
 
-    a {
-        color: var(--content-accent);
-        text-decoration: none;
-        transition: .5s;
-    }
+	a {
+		color: var(--content-accent);
+		text-decoration: none;
+		transition: 0.5s;
+	}
 
-    a:hover {
-        color: var(--links);
-        text-decoration: underline dotted;
-    }
+	a:hover {
+		color: var(--links);
+		text-decoration: underline dotted;
+	}
 }
 
 .meta {
-    color: var(--content-accent);
-    font-size: $text-sm;
+	color: var(--content-accent);
+	font-size: $text-sm;
 }
 
 .photo {
-    margin-top: $pad-lg;
-    margin-bottom: $pad-lg;
-    
-     &--content {
-        display: flex;
-        flex-direction: column;
-        img {
-            align-self: center;
-            max-width: 90%;
-            max-height: 100vh;
-        }
-    }
-}
+	margin-top: $pad-lg;
+	margin-bottom: $pad-lg;
 
+	&--content {
+		display: flex;
+		flex-direction: column;
+		img {
+			align-self: center;
+			max-width: 90%;
+			max-height: 100vh;
+		}
+	}
+}
