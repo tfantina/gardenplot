@@ -1,13 +1,22 @@
 <script>
-    export let path, title;
-</script>   
+	export let path, title;
+</script>
 
-<a href={path}>
-    <div class="card">
-        <div class="row text-center">
-            <h4>{title}</h4>
-        </div>
+{#if path}
+	<a href={path}>
+		<div class="card card-hover">
+			<div class="row text-center">
+				<h4>{title}</h4>
+			</div>
 
-        <slot />
-    </div>
-</a>
+			<slot />
+		</div>
+	</a>
+{:else}
+	<div class="card">
+		<div class="row text-center">
+			<h4>{title}</h4>
+		</div>
+		<slot />
+	</div>
+{/if}

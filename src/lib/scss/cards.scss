@@ -1,9 +1,9 @@
-a:has(.card) {
+a:has(.card.card-hover) {
 	text-decoration: none;
 	transition: .5s
 }
 
-a:has(.card):hover {
+a:has(.card.card-hover):hover {
 	transform: scale(1.01) rotate(.2deg);
 }
 

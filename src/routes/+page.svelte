@@ -14,10 +14,10 @@
 	</div>
 
 	<div class="d-flex justify-between">
-		<Card title="Recent Posts">
+		<Card title="Recent Posts" >
 			{#each data.posts as post}
 				<Card path={`${base}${post.path}`} title={post.meta.title}>
-					<ShortPost meta={post.meta} size={0} />
+					<ShortPost meta={post.meta} size={200} />
 				</Card>
 			{/each}
 		</Card>
