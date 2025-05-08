@@ -3,7 +3,7 @@ title: 'Weekly Roundup: Apr 25, 2025'
 hero: ''
 excerpt: ''
 alt: ''
-date: '2025-25-18'
+date: '2025-04-25'
 tags: ["programming", "life"]
 ---
 
