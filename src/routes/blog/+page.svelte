@@ -15,7 +15,7 @@
 </div>
 {#each data.posts as post}
 	<Card path={`${base}${post.path}`} title={post.meta.title}>
-		<ShortPost meta={post.meta} size={200} />
+		<ShortPost meta={post.meta} size={400} />
 	</Card>
 {/each}
 

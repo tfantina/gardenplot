@@ -16,21 +16,25 @@ const config = {
 		}
 	},
 	extensions: ['.svelte', '.md'],
-	preprocess: [vitePreprocess(), mdsvex({
-		extensions: ['.md'], remarkPlugins: [
-			() => (tree, file) => {
-				// The content starts after the frontmatter
-				const match = file.contents.match(/---\n([\s\S]*?)\n---\n([\s\S]*)/);
-				if (match) {
-					// match[2] contains everything after the frontmatter
-					file.data.fm = {
-						...file.data.fm,
-						rawContent: match[2].trim()
-					};
+	preprocess: [
+		vitePreprocess(),
+		mdsvex({
+			extensions: ['.md'],
+			remarkPlugins: [
+				() => (tree, file) => {
+					// The content starts after the frontmatter
+					const match = file.contents.match(/---\n([\s\S]*?)\n---\n([\s\S]*)/);
+					if (match) {
+						// match[2] contains everything after the frontmatter
+						file.data.fm = {
+							...file.data.fm,
+							rawContent: match[2].trim()
+						};
+					}
 				}
-			}
-		]
-	})],
+			]
+		})
+	]
 };
 
 export default config;

@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "src": "/_app/immutable/assets/.*",
+      "headers": {
+        "cache-control": "public, immutable, max-age=31536000"
+      }
+    }
+  ],
+  "framework": "sveltekit"
+}
