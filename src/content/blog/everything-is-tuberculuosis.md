@@ -9,7 +9,7 @@ tags: ["books"]
 ---
 
 I've never read anything from John Green but I used to watch his YouTube channel. As a young adult fiction author; I felt his handling of such a broad and complex topic, like the history of tuberculosis and it's impacts on the world today would be both engaging and digestable. I was not wrong in this assumption. This book was fast even by quick read standards, I could have read another two or three volumns but I think Green was able to say what he wanted to: Tuberculuosis is not an archaic/cured disease it still impacts hundreds of millions of people who are for the most part neglected due to their poverty and or race. There is hope for the future but only if people speak up and speak out advocating both for themselves (Green points to several activists in both India and Sierra Leone) and others as we all must.
----
+
 Some quotes and ideas that stayed with me:
 
 "Framing illness as even involving morality seems to me to be a mistake... biology has no moral compass it does not punish the evil and reward the good, it doesn't even know about evil and good.  Stigma is a way of saying 'you deserve to have this happen' but implied within the stigma is also 'and I don't deserve it so I don't need to worry about it happening to me'".
