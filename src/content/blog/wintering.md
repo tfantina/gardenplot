@@ -3,6 +3,7 @@ title: 'Wintering: The Power of Rest and Retreat in Difficult Time'
 hero: ''
 excerpt: ''
 alt: ''
+book_author: 'Katherine May'
 date: '2025-01-22'
 tags: ["books"]
 ---
