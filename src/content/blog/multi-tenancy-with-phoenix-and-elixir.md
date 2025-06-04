@@ -3,7 +3,7 @@ title: 'Multi-tenancy with Phoenix and Elixir'
 hero: ''
 excerpt: ''
 alt: '<span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@jentheodore?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Jen Theodore</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a>'
-date: ''
+date: '2025-06-04'
 tags: ["programming", "elixir"]
 ---
 
