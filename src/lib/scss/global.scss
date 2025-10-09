@@ -33,10 +33,6 @@ h1 {
 	@include media-md {
 		font-size: $text-h2;
 	}
-
-	@include media-lg {
-		font-size: $text-h1;
-	}
 }
 
 h2 {
