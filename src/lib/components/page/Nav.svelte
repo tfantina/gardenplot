@@ -20,7 +20,7 @@
 		<div class="content p-3 rounded-3 d-flex flex-column align-items-center">
 			<NavButton text="Home" target={`${base}/`} />
 			<NavButton text="Projects" target={`${base}/projects`} />
-			<NavButton text="Blog" target={`${base}/blog`} />
+			<NavButton text="Micro Blog" target="https://tfantina.micro.blog/" />
 			<NavButton text="About" target={`${base}/about`} />
 		</div>
 	</div>
