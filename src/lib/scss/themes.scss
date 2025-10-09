@@ -58,12 +58,17 @@ h5 {
 	z-index: 5000;
 	position: fixed;
 	padding: $pad-xs;
-	top: 0;
+	bottom: 0;
 	width: 215px;
 	margin-left: -150px;
 	transition: 0.3s;
 	background-color: var(--primary);
 	border-bottom-right-radius: 8px;
+
+	@include media-lg {
+		top: 0;
+		bottom: inherit;
+	}
 
 	&--all {
 		padding: 0 $pad-3xs;

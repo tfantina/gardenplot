@@ -1,7 +1,7 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import 'utopia.scss';
-@import 'themes.scss';
 @import 'cardinal/app.scss';
+@import 'themes.scss';
 @import 'layout.scss';
 @import 'buttons.scss';
 @import 'cards.scss';
@@ -28,13 +28,21 @@ body {
 
 h1 {
 	font-family: $headings;
-	font-size: $text-h2;
+	font-size: $text-h3;
+
+	@include media-md {
+		font-size: $text-h2;
+	}
 }
 
 h2 {
 	font-family: $primary;
 	font-weight: 700;
-	font-size: $text-h2;
+	font-size: $text-h3;
+
+	@include media-md {
+		font-size: $text-h2;
+	}
 }
 
 h3 {
