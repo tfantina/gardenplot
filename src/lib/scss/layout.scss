@@ -1,117 +1,161 @@
 .nav-container {
-    display: none;
-    grid-area: n;
+	display: none;
+	grid-area: n;
 
-    @include media-md {
-        display: flex;
-    } 
+	@include media-lg {
+		display: flex;
+	}
 
-    .links {
-        position: relative;
-        height: 100%;
-    }
+	.links {
+		position: relative;
+		height: 100%;
+	}
 
+	&.nav-active {
+		position: absolute;
+		width: 100%;
+		display: block;
+		margin-top: calc($pad-s + $text-h1);
+	}
+}
+
+.nav-mobile {
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 40px;
+
+	@include media-lg {
+		display: none;
+	}
+
+	span {
+		display: block;
+		height: 4px;
+		background-color: var(--primary-dark);
+		position: absolute;
+		transition: 0.6s;
+		transform-origin: center;
+		width: 30px;
+		z-index: 800;
+		top: 20px;
+
+		@include media-lg {
+			display: none;
+		}
+
+		&:nth-child(1) {
+			top: 30px;
+		}
+		&:nth-child(2) {
+			top: 40px;
+		}
+		&:nth-child(3) {
+			top: 50px;
+		}
+	}
 }
 
 .content-container {
-   display: grid;
-   grid-auto-flow: column;
-   width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   grid-template-columns: repeat(12, 1fr);
-   grid-template-areas: 
-        "h h h h h h h h h h h h"
-        "b b b b b b b b b b b b"
-        "b b b b b b b b b b b b";
-    grid-gap: $pad-lg;
-    grid-template-rows: 55px auto auto;
+	display: grid;
+	grid-auto-flow: column;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-areas:
+		'h h h h h h h h h h h h'
+		'b b b b b b b b b b b b'
+		'b b b b b b b b b b b b';
+	grid-gap: $pad-xs;
+	grid-template-rows: calc($pad-lg + $text-h1) auto auto;
 
-    @include media-md {
-        width: 90%;
-        grid-template-areas: 
-        "h h h h h h h h h h h h"
-        "n n b b b b b b b b b b"
-        "n n b b b b b b b b b b";
-    }
+	@include media-lg {
+		width: 98%;
+		grid-template-areas:
+			'h h h h h h h h h h h h'
+			'n b b b b b b b b b b b'
+			'n b b b b b b b b b b b';
+	}
 
-    @include media-xl {
-        width: 80%;
-    }
+	@include media-lg {
+		width: 90%;
+	}
+
+	@include media-xx {
+		width: 80%;
+	}
 }
 
 header {
-    grid-area: h;
-    height: calc($pad-xl);
-    position: relative;
-    margin:  $pad-s 0 ;
-    padding: 0;
+	grid-area: h;
+	height: calc($pad-s + $text-h1);
+	position: relative;
+	margin: $pad-s;
+	padding: 0;
 
-    img {
-        height: calc($pad-2xl);
-    }
+	img {
+		height: calc($pad-xl);
+	}
 
-    .header-content {
-        display: flex;
-        width: 100%;
-        height: 100%;
-    }
+	.header-content {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
 
-    .header-image {
-        height: $pad-xl;
-        position: relative;
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        border-radius: 10px;
+	.header-image {
+		height: $pad-xl;
+		position: relative;
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+		border-radius: 10px;
 
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-    }
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+	}
 
-    .logo-img {
-        height: 100%;
-        margin-right: $pad-lg;
-        order: 2;
+	.logo-img {
+		height: 100%;
+		margin-right: $pad-xl;
+		order: 2;
 
-        @include media-sm {
-            order: 1;
-        }
+		@include media-sm {
+			order: 1;
+		}
 
-        img {
-            height: 100%;
-            aspect-ratio: 1;
-            object-fit: contain;
-        }
+		img {
+			height: 100%;
+			aspect-ratio: 1;
+			object-fit: contain;
+		}
+	}
 
-    }
+	.title-row {
+		order: 1;
 
-    .title-row {
-        order: 1;
-
-        @include media-sm {
-            order: 2;
-        }
-    }
+		@include media-sm {
+			order: 2;
+		}
+	}
 }
 
 main {
-    grid-area: b;
+	grid-area: b;
 }
-
 
 footer {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--content-bg);
-    margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--content-bg);
+	margin-top: 100px;
 
-    @include media-md {
-        display: none;
-    }
+	@include media-md {
+		display: none;
+	}
 }
-
